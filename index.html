@@ -423,6 +423,7 @@
     #h-contact .contact-info-grid{border-top-color:rgba(201,169,110,0.2);}
     #h-contact footer{border-top-color:rgba(201,169,110,0.15);}
   </style>
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
@@ -477,7 +478,15 @@
     <li><a href="#contact">Contact</a></li>
     <li><button class="nav-switch-btn" onclick="showLanding()">← Switch</button></li>
   </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="nav-overlay" id="navOverlay">
+  <ul id="mobileNavLinks"></ul>
+</div>
 
 <!-- ══════════════════════════════════
      LOGISTICS SITE
@@ -610,7 +619,7 @@
       </div>
     </div>
     <footer>
-      <div class="footer-logo"><div class="footer-logo-name">uyuni</div><div class="footer-logo-sub">Logistics Real Estate</div></div>
+      <div class="footer-logo"><img class="footer-logo-img-l" alt="uyuni" style="height:40px;filter:brightness(0) invert(1);opacity:0.88;"></div>
       <p>© 2026 Uyuni Inc. All rights reserved. · uyuni.ai</p>
     </footer>
   </section>
@@ -832,7 +841,7 @@
       </div>
     </div>
     <footer style="border-top-color:rgba(201,169,110,0.15);">
-      <div><div class="footer-logo-name">uyuni</div><div class="footer-logo-sub">Hotels & Branded Properties</div></div>
+      <div class="footer-logo"><img class="footer-logo-img-h" alt="uyuni" style="height:40px;filter:brightness(0) invert(1);opacity:0.88;"></div>
       <p style="color:var(--silver);opacity:0.4;">© 2026 Uyuni Inc. All rights reserved. · uyuni.ai</p>
     </footer>
   </section>
@@ -890,4 +899,67 @@
     if (e) e.preventDefault();
     const landing = document.getElementById('landing');
     const nav = document.getElementById('navbar');
-    document.getElementById('site-
+    document.getElementById('site-logistics').style.display = 'none';
+    document.getElementById('site-hotels').style.display = 'none';
+    nav.classList.remove('visible');
+    landing.style.display = '';
+    setTimeout(() => { landing.classList.remove('hidden'); }, 50);
+    currentSector = null;
+    closeMobileMenu();
+  }
+
+  /* ─── Scroll & Observer ─── */
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  function initObserver(){
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    fadeEls.forEach(el => obs.observe(el));
+  }
+
+  /* ─── Mobile Menu ─── */
+  function toggleMobileMenu(){
+    const h=document.getElementById('hamburger');
+    const o=document.getElementById('navOverlay');
+    h.classList.toggle('active');
+    o.classList.toggle('active');
+    document.body.style.overflow=o.classList.contains('active')?'hidden':'';
+  }
+  function closeMobileMenu(){
+    const h=document.getElementById('hamburger');
+    const o=document.getElementById('navOverlay');
+    h.classList.remove('active');
+    o.classList.remove('active');
+    document.body.style.overflow='';
+  }
+  function syncMobileNav(){
+    const src=document.getElementById('navLinks');
+    const dst=document.getElementById('mobileNavLinks');
+    if(src&&dst) dst.innerHTML=src.innerHTML;
+    dst.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>closeMobileMenu()));
+    const switchBtn=dst.querySelector('.nav-switch-btn');
+    if(switchBtn) switchBtn.addEventListener('click',()=>closeMobileMenu());
+  }
+
+  // Override enterSector to also sync mobile nav
+  const _origEnterSector = enterSector;
+  enterSector = function(sector){
+    _origEnterSector(sector);
+    setTimeout(syncMobileNav, 800);
+  };
+  window.addEventListener('resize',()=>{if(window.innerWidth>1024)closeMobileMenu();});
+
+  // Copy nav logo to footer logos
+  const _navLogoSrc = document.querySelector('.nav-logo img').src;
+  document.querySelector('.footer-logo-img-l').src = _navLogoSrc;
+  document.querySelector('.footer-logo-img-h').src = _navLogoSrc;
+</script></body></html>

@@ -414,36 +414,11 @@
     .nav-links a{color:var(--silver);}
     .nav-links a:hover{color:var(--gold);}
 
-    /* Responsive */
-    @media(max-width:1024px){
-      #h-intro{grid-template-columns:1fr;gap:40px;padding:80px 32px;}
-      .h-services-grid{grid-template-columns:1fr;}
-      #h-why .why-top{flex-direction:column;gap:40px;}
-      #h-why .why-top-right{grid-template-columns:repeat(3,1fr);gap:20px;}
-      .h-why-cards{grid-template-columns:repeat(2,1fr);}
-      .h-team-grid{grid-template-columns:1fr;}
-      .portfolio-grid{grid-template-columns:repeat(2,1fr);}
-      .h-project-row{grid-template-columns:60px 1fr;gap:12px;}
-      .h-project-tag,.h-project-meta{display:none;}
-      .h-highlights-grid{grid-template-columns:repeat(2,1fr);}
-    }
-    @media(max-width:768px){
-      .h-hero-content{padding:0 24px 60px;}
-      #h-intro{padding:60px 24px;}
-      #h-services,#h-projects{padding:80px 24px;}
-      #h-why{padding:80px 24px;}
-      #h-why .why-top-right{grid-template-columns:1fr;gap:16px;}
-      .h-why-cards{grid-template-columns:1fr;}
-      #h-team{padding:80px 24px;}
-      .h-team-card{padding:32px 24px;}
-      .h-highlights-grid{grid-template-columns:1fr;}
-      .portfolio-grid{grid-template-columns:1fr;}
-      #h-contact{padding:80px 24px 60px;}
-    }
 
   </style>
+  <link rel="stylesheet" href="responsive.css">
 </head>
-<body>
+<body class="hotel-page">
 <!-- NAV -->
 <nav id="navbar" class="visible scrolled">
   <a class="nav-logo" href="index.html">
@@ -459,7 +434,21 @@
     <li><a href="#h-contact">Contact</a></li>
     <li><a href="index.html" class="nav-switch-btn" style="text-decoration:none;">&#8592; Switch Sector</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<!-- Mobile Nav Overlay -->
+<div class="nav-overlay" id="navOverlay">
+  <ul id="mobileNavLinks">
+    <li><a href="#h-services">Services</a></li>
+    <li><a href="#h-why">Why Uyuni</a></li>
+    <li><a href="#h-portfolio">Portfolio</a></li>
+    <li><a href="#h-team">Team</a></li>
+    <li><a href="#h-contact">Contact</a></li>
+    <li><a href="index.html" class="nav-switch-btn" style="text-decoration:none;">&#8592; Switch Sector</a></li>
+  </ul>
+</div>
 
 <div id="site-hotels">
 
@@ -485,7 +474,7 @@
       <h2>국내에서 가장 드문<br>호스피탈리티<br>부동산 전문가</h2>
     </div>
     <div class="fade-up">
-      <p>한송이 컨설턴트는 호텔 개발 전 과정과 글로벌 소싱을 10년 이상 직접 수행해온 호스피탈리티 전문가입니다. 부동산 투자와 호텔 운영에 대한 깊이 있는 전문 역량을 함께 갖추고 있습니다.</p>
+      <p>한송이 이사는 호텔 개발 전 과정과 글로벌 소싱을 10년 이상 직접 수행해온 호스피탈리티 전문가입니다. 부동산 투자와 호텔 운영에 대한 깊이 있는 전문 역량을 함께 갖추고 있습니다.</p>
       <p>호텔신라에서 신라모노그램 브랜드 전략·기획·개발을 총괄하고, 삼성그룹사 부동산 커미티에 호텔신라 단독대표로 참여하는 등 국내 최고 수준의 호스피탈리티 트랙 레코드를 보유하고 있습니다.</p>
       <p>현재 우유니에서 SK 계열사 브랜디드 레지던스 타당성 조사, 강남 럭셔리 부티크 호텔 개발 PM, 5성급 HMA 자문 등 다양한 프로젝트를 수행하고 있습니다.</p>
     </div>
@@ -524,7 +513,7 @@
       </div>
       <div class="h-service-card">
         <span class="h-service-num">03</span>
-        <h3 class="h-service-title">브랜드 분석 및<br>운영사 커뮤니케이션</h3>
+        <h3 class="h-service-title">브랜드 분석 및<br>운영사 <span style="white-space:nowrap">커뮤니케이션</span></h3>
         <p class="h-service-desc">특정 입지와 상품에 최적화된 브랜드 포지셔닝 및 시장 내 적합성에 대한 정교한 분석을 제공합니다.</p>
         <ul class="h-service-items">
           <li>브랜드 포지셔닝 및 시장 적합성 분석</li>
@@ -566,22 +555,22 @@
       <div class="h-why-card">
         <svg class="h-why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M6 30V14l12-8 12 8v16"/><rect x="13" y="20" width="10" height="10"/></svg>
         <h3>호텔신라<br>브랜드 개발 총괄</h3>
-        <p>글로벌 5성급 라이프스타일 브랜드 "신라모노그램" 전략·기획·개발 총괄. 다낭·강릉·시안 등 다수 프로젝트 실행.</p>
+        <p style="word-break:keep-all">글로벌 5성급 라이프스타일 브랜드 "신라모노그램" 전략·기획·개발 총괄. 다낭·강릉·시안 등 다수 프로젝트 실행</p>
       </div>
       <div class="h-why-card">
         <svg class="h-why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><circle cx="18" cy="18" r="13"/><path d="M11 18a7 7 0 0014 0M11 18a7 7 0 0114 0M18 5v26"/><path d="M7 12h22M7 24h22"/></svg>
         <h3>글로벌 소싱<br>부서장 역임</h3>
-        <p>그룹사 호텔 소싱 총괄 부서장으로서 전 세계 2,000개+ 호텔과 기업계약 체결, 인벤토리 6만→20만실 확장.</p>
+        <p style="word-break:keep-all">그룹사 호텔 소싱 총괄 부서장으로서 전 세계 2,000개+ 호텔과 기업계약 체결, 인벤토리 6만→20만실 확장</p>
       </div>
       <div class="h-why-card">
         <svg class="h-why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M18 4l4 8h9l-7 6 3 9-9-6-9 6 3-9-7-6h9z"/></svg>
         <h3>삼성그룹<br>부동산 커미티</h3>
-        <p>삼성그룹사 부동산 커미티에서 호텔신라 단독 대표로 2년간 포럼 참여. 그룹 차원의 부동산 전략 논의 주도.</p>
+        <p style="word-break:keep-all">삼성그룹사 부동산 커미티에서 호텔신라 단독 대표로 2년간 포럼 참여. 그룹 차원의 부동산 전략 논의 주도</p>
       </div>
       <div class="h-why-card">
         <svg class="h-why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M8 28V16M14 28V10M20 28V18M26 28V6"/><path d="M5 28h26"/></svg>
         <h3>브랜디드 레지던스<br>최초 수주</h3>
-        <p>신라 최상위 라인업 'The Shilla' 브랜디드 레지던스 개발 전략을 수립하고 국내 최초 프로젝트를 수주했습니다.</p>
+        <p style="word-break:keep-all">신라 최상위 라인업 'The Shilla' 브랜디드 레지던스 개발 전략을 수립하고 국내 최초 프로젝트를 수주</p>
       </div>
     </div>
   </section>
@@ -600,7 +589,7 @@
           <div class="portfolio-card-title">SK 계열사 브랜디드 레지던스<br>복합개발 타당성 조사</div>
           <div class="portfolio-card-sub">국내 대기업 계열사 · 2024–2025</div>
         </div>
-        <span class="portfolio-card-status">完</span>
+        <span class="portfolio-card-status">완료</span>
       </div>
       <div class="portfolio-card">
         <div class="portfolio-card-img" style="background:linear-gradient(135deg,#1a2a3a 0%,#2a3a4a 50%,#0d1b2a 100%);"></div>
@@ -618,7 +607,7 @@
           <div class="portfolio-card-title">공공기관 5성급 호텔<br>HMA 작성 및 협상 자문</div>
           <div class="portfolio-card-sub">국내 공공기관 · 2024–2025</div>
         </div>
-        <span class="portfolio-card-status">完</span>
+        <span class="portfolio-card-status">완료</span>
       </div>
       <div class="portfolio-card">
         <div class="portfolio-card-img" style="background:linear-gradient(135deg,#3a2a1a 0%,#5a4a30 50%,#2d1e0f 100%);"></div>
@@ -627,7 +616,7 @@
           <div class="portfolio-card-title">신라모노그램 강릉 개발</div>
           <div class="portfolio-card-sub">글로벌 5성급 라이프스타일 브랜드 · 호텔신라</div>
         </div>
-        <span class="portfolio-card-status">完</span>
+        <span class="portfolio-card-status">완료</span>
       </div>
       <div class="portfolio-card">
         <div class="portfolio-card-img" style="background:linear-gradient(135deg,#2a1a2a 0%,#4a2a4a 50%,#1a0f1a 100%);"></div>
@@ -636,7 +625,7 @@
           <div class="portfolio-card-title">신라스테이 서부산 개발</div>
           <div class="portfolio-card-sub">부산 · 신라스테이 브랜드 · 호텔신라</div>
         </div>
-        <span class="portfolio-card-status">完</span>
+        <span class="portfolio-card-status">완료</span>
       </div>
       <div class="portfolio-card">
         <div class="portfolio-card-img" style="background:linear-gradient(135deg,#3a1a0a 0%,#5a3a1a 50%,#2d0f05 100%);"></div>
@@ -645,7 +634,7 @@
           <div class="portfolio-card-title">신라모노그램 시안(Xi'an) 개발</div>
           <div class="portfolio-card-sub">중국 시안 · 글로벌 브랜드 해외 진출 · 호텔신라</div>
         </div>
-        <span class="portfolio-card-status">完</span>
+        <span class="portfolio-card-status">완료</span>
       </div>
     </div>
   </section>
@@ -659,7 +648,7 @@
     <div class="h-team-grid fade-up">
       <div class="h-team-card">
         <div class="h-team-card-accent"></div>
-        <p class="team-role" style="color:var(--gold);">Hotel &amp; Branded Properties Consultant</p>
+        <p class="team-role" style="color:var(--gold);">Hotel &amp; Branded Properties Director</p>
         <h2 class="team-name" style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--white);margin-bottom:8px;">한송이</h2>
         <p class="team-name-en" style="font-family:'DM Sans',sans-serif;font-size:13px;color:var(--silver);font-weight:300;letter-spacing:1px;margin-bottom:32px;">Song Ye Han</p>
         <div class="team-career-summary">
@@ -672,7 +661,7 @@
           국내에서는 드물게 호텔 개발 전 과정과 글로벌 소싱을 10년 이상 직접 수행해온 호스피탈리티 전문가입니다. 호텔신라에서 글로벌 5성급 라이프스타일 브랜드 "신라모노그램" 기획·개발을 총괄하고, 삼성그룹사 부동산 커미티에 호텔신라 단독 대표로 참여했습니다. 'The Shilla' 브랜디드 레지던스 최초 프로젝트를 수주하는 등 부동산 투자와 호텔 운영에 대한 깊이 있는 전문 역량을 보유하고 있습니다.
         </p>
         <div class="team-contact" style="border-top-color:rgba(201,169,110,0.15);">
-          <a href="mailto:songye@uyuni.ai" style="color:var(--silver);"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg>문의: songye@uyuni.ai</a>
+          <a href="mailto:syhan@uyuni.ai" style="color:var(--silver);"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg>문의: syhan@uyuni.ai</a>
         </div>
       </div>
       <div class="h-team-card" style="background:#1a0f08;padding:40px 48px;">
@@ -715,13 +704,12 @@
       <p>호텔 개발, 투자 분석, 브랜드 선정, HMA 협상까지<br>어떠한 문의도 환영합니다.</p>
       <div class="contact-info-grid" style="border-top-color:rgba(201,169,110,0.2);">
         <div class="contact-info-item"><label>Address</label><p>경기 성남시 분당구 판교역로 136<br>판교역 힐스테이트 1층 1056호</p></div>
-        <div class="contact-info-item"><label>Song Ye Han 컨설턴트</label><a href="mailto:songye@uyuni.ai" style="color:var(--white);">songye@uyuni.ai</a></div>
-        <div class="contact-info-item"><label>Website</label><a href="https://uyuni.ai" style="color:var(--white);">uyuni.ai</a></div>
+        <div class="contact-info-item"><label>Song Ye Han 이사</label><a href="mailto:syhan@uyuni.ai" style="color:var(--white);">syhan@uyuni.ai</a></div>
       </div>
     </div>
     <footer style="border-top-color:rgba(201,169,110,0.15);">
-      <div><div class="footer-logo-name">uyuni</div><div class="footer-logo-sub">Hotels &amp; Branded Properties</div></div>
-      <p style="color:var(--silver);opacity:0.4;">&copy; 2026 Uyuni Inc. All rights reserved. · uyuni.ai</p>
+      <div class="footer-logo"><img class="footer-logo-img" alt="uyuni" style="height:40px;filter:brightness(0) invert(1);opacity:0.88;"></div>
+      <p style="color:var(--silver);opacity:0.4;">&copy; 2026 Uyuni Inc. All rights reserved.</p>
     </footer>
   </section>
 
@@ -733,6 +721,8 @@
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
 
+  document.querySelector('.footer-logo-img').src = document.querySelector('.nav-logo img').src;
+
   const fadeEls = document.querySelectorAll('.fade-up');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
@@ -743,6 +733,20 @@
     });
   }, { threshold: 0.08 });
   fadeEls.forEach(el => observer.observe(el));
+
+  /* Mobile Menu */
+  function toggleMobileMenu(){
+    document.getElementById('hamburger').classList.toggle('active');
+    document.getElementById('navOverlay').classList.toggle('active');
+    document.body.style.overflow=document.getElementById('navOverlay').classList.contains('active')?'hidden':'';
+  }
+  function closeMobileMenu(){
+    document.getElementById('hamburger').classList.remove('active');
+    document.getElementById('navOverlay').classList.remove('active');
+    document.body.style.overflow='';
+  }
+  document.querySelectorAll('#navOverlay a').forEach(a=>a.addEventListener('click',closeMobileMenu));
+  window.addEventListener('resize',()=>{if(window.innerWidth>1024)closeMobileMenu();});
 </script>
 </body>
 </html>

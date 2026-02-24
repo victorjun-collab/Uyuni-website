@@ -173,7 +173,7 @@
     .hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 20%,rgba(13,27,42,0.65) 100%);}
     .hero-bottom-fade{position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,var(--navy),transparent);}
     .hero-content{position:relative;z-index:2;padding:0 60px 100px;max-width:900px;}
-    .hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:16px;}
+    .hero-eyebrow{font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:16px;font-weight:400;font-style:italic;}
     .hero-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold);}
     .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:300;line-height:1.0;color:var(--white);margin-bottom:32px;letter-spacing:-1px;}
     .hero-title em{font-style:italic;color:var(--silver-light);}
@@ -299,6 +299,7 @@
     nav { opacity:1 !important; pointer-events:all !important; }
     #site-logistics { display:block !important; }
   </style>
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
@@ -322,7 +323,22 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="index.html" class="nav-switch-btn" style="text-decoration:none;">← Switch Sector</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<!-- Mobile Nav Overlay -->
+<div class="nav-overlay" id="navOverlay">
+  <ul id="mobileNavLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Uyuni</a></li>
+    <li><a href="#track-record">Track Record</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#recognition">Recognition</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="index.html" class="nav-switch-btn" style="text-decoration:none;">← Switch Sector</a></li>
+  </ul>
+</div>
 
 <div id="site-logistics">
 <section id="hero">
@@ -343,7 +359,7 @@
     </div>
     <div class="intro-right fade-up">
       <p>우유니 주식회사는 물류 부동산 시장의 변화에 선제적으로 대응하며, 투자자와 임차인 모두에게 최적화된 전략적 파트너십을 제공합니다.</p>
-      <p>브룩필드·블랙스톤 계열 등 글로벌 대형 자산운용사와의 긴밀한 협업을 통해 시장에서 가장 신뢰받는 물류 부동산 어드바이저로 자리매김하고 있습니다.</p>
+      <p>글로벌 투자회사들과의 긴밀한 협업을 통해 시장에서 가장 신뢰받는 물류 부동산 어드바이저로 자리매김하고 있습니다.</p>
       <p>2024년 1월 설립 이후, 총 2,450억 원 규모의 매입 자문을 포함한 다수의 주요 프로젝트를 성공적으로 수행하였습니다.</p>
     </div>
   </section>
@@ -366,13 +382,13 @@
       <div class="why-top-left fade-up"><p class="section-label">Why Uyuni</p><h2>시장을 가장<br>먼저 읽는<br>파트너</h2></div>
       <div class="why-top-right fade-up">
         <div class="stat-item"><div class="stat-num">15<span class="stat-unit">년+</span></div><div class="stat-label">물류 부동산<br>투자 및 컨설팅 경력</div></div>
-        <div class="stat-item"><div class="stat-num">2,450<span class="stat-unit">억</span></div><div class="stat-label">브룩필드 매입자문<br>거래 규모</div></div>
+        <div class="stat-item"><div class="stat-num">2,450<span class="stat-unit">억</span></div><div class="stat-label">매입자문<br>거래 규모</div></div>
         <div class="stat-item"><div class="stat-num">36<span class="stat-unit">건+</span></div><div class="stat-label">SPI 물류센터<br>정기 기고 누적</div></div>
       </div>
     </div>
     <div class="why-cards fade-up">
       <div class="why-card"><svg class="why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><circle cx="18" cy="18" r="14"/><path d="M18 8v10l6 4"/></svg><h3>업계 최초<br>인사이트</h3><p>Seoul Property Insight 정기 기고를 통해 물류 부동산 시장의 트렌드와 전략을 업계에 먼저 전달합니다.</p></div>
-      <div class="why-card"><svg class="why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M6 28L14 18l8 6 8-12"/><circle cx="30" cy="12" r="2.5"/></svg><h3>글로벌<br>네트워크</h3><p>브룩필드, 블랙스톤 계열 등 글로벌 대형 자산운용사와의 긴밀한 협업 관계를 보유합니다.</p></div>
+      <div class="why-card"><svg class="why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M6 28L14 18l8 6 8-12"/><circle cx="30" cy="12" r="2.5"/></svg><h3>글로벌<br>네트워크</h3><p>글로벌 투자회사들과의 긴밀한 협업 관계를 보유합니다.</p></div>
       <div class="why-card"><svg class="why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><rect x="6" y="10" width="24" height="16" rx="2"/><path d="M12 10V8a2 2 0 014 0v2M20 10V8a2 2 0 014 0v2"/><path d="M6 16h24"/></svg><h3>데이터 기반<br>의사결정</h3><p>국토교통부 데이터 자동화 시스템을 통해 경쟁사 대비 신속하고 정확한 시장 분석을 제공합니다.</p></div>
       <div class="why-card"><svg class="why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M18 4l4 8h9l-7 6 3 9-9-6-9 6 3-9-7-6h9z"/></svg><h3>검증된<br>전문성</h3><p>KT Estate 투자심의위원, 금융투자교육원 강의 등 업계에서 공인된 전문가로 활동 중입니다.</p></div>
     </div>
@@ -385,11 +401,10 @@
     </div>
     <div class="fade-up">
       <div class="project-row"><span class="project-index">01</span><div class="project-name">석남 복합물류 매입 자문<span>인천광역시 서구 석남동 · 148,238㎡</span></div><span class="project-tag tag-sales">Sales Advisory</span><div class="project-meta"><strong>2,450억 원</strong>Brookfield 자산운용 · 2024.07–2025.02</div></div>
-      <div class="project-row"><span class="project-index">02</span><div class="project-name">이지메디컴 의약품 유통센터 임대차<span>경기도 김포시 · 김포 성광물류센터</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 600평</strong>Pebblestone (Blackstone) · 2024.10–2025.03</div></div>
-      <div class="project-row"><span class="project-index">03</span><div class="project-name">엠지물류 저온 물류센터 임대차<span>경기도 이천시 · 켄달스퀘어 수정DC</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 3,087평 + 3,000평</strong>ESR 켄달스퀘어 · 2024.02–2025.07</div></div>
-      <div class="project-row"><span class="project-index">04</span><div class="project-name">로지스포인트 여주 개발 PM<span>경기도 여주시 삼교동 · 130,990㎡</span></div><span class="project-tag tag-dev">Development PM</span><div class="project-meta"><strong>약 2,000억 원</strong>마스턴투자운용 · 2021–2023</div></div>
-      <div class="project-row"><span class="project-index">05</span><div class="project-name">경산 물류센터 시장조사 자문<span>외국계 투자사 매입 관련</span></div><span class="project-tag tag-consulting">Consulting</span><div class="project-meta"><strong>—</strong>외국계 투자사 · 2025.04–2025.05</div></div>
-      <div class="project-row"><span class="project-index">06</span><div class="project-name">인천 항동 저온 물류센터 임대차<span>3PL 업체 · 임대면적 약 1,200평</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 1,200평</strong>— · 2025.07–2025.12</div></div>
+      <div class="project-row"><span class="project-index">02</span><div class="project-name">의약품 유통센터 임대차<span>경기도 김포시</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 600평</strong>Pebblestone (Blackstone) · 2024.10–2025.03</div></div>
+      <div class="project-row"><span class="project-index">03</span><div class="project-name">저온 물류센터 임대차<span>경기도 이천시 · 임대면적 6,000평</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 3,087평 + 3,000평</strong>ESR 켄달스퀘어 · 2024.02–2025.07</div></div>
+      <div class="project-row"><span class="project-index">04</span><div class="project-name">경산 물류센터 시장조사 자문<span>외국계 투자사 매입 관련</span></div><span class="project-tag tag-consulting">Consulting</span><div class="project-meta"><strong>—</strong>외국계 투자사 · 2025.04–2025.05</div></div>
+      <div class="project-row"><span class="project-index">05</span><div class="project-name">인천 항동 저온 물류센터 임대차<span>3PL 업체 · 임대면적 약 1,200평</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 1,200평</strong>— · 2025.07–2025.12</div></div>
     </div>
   </section>
 
@@ -407,19 +422,19 @@
         <div class="team-career-summary"><span class="career-badge">부동산 경력 15년</span><span class="career-badge">CBRE Korea</span><span class="career-badge">Colony Capital</span><span class="career-badge">U of Michigan</span></div>
         <p class="team-bio">CBRE Korea에서 매입매각 및 임대차 컨설팅을 2011년부터 수년간 수행하였으며, 물류센터 시장의 변천과 역사에 대한 깊은 이해를 보유하고 있습니다. Colony Capital 한국사무소에서 국내외 부동산 투자 및 역외펀드 자금 모집을 담당했으며, 미국 물류센터 포트폴리오(500개 이상 편입자산)에 투자하는 Colony Industrial Fund의 한국 담당자로 활동했습니다.</p>
         <div class="team-contact">
-          <a href="/cdn-cgi/l/email-protection#aed8c7cddac1dc80c4dbc0eedbd7dbc0c780cfc7"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg><span class="__cf_email__" data-cfemail="295f404a5d465b07435c47695c505c4740074840">[email&#160;protected]</span></a>
+          <a href="mailto:victor.jun@uyuni.ai"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg>victor.jun@uyuni.ai</a>
           <a href="tel:01040449037"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H3a1 0 00-1 1v1c0 6 5 11 11 11h1a1 1 0 001-1v-2l-3-1-1 1a9 9 0 01-4-4l1-1-1-3z"/></svg>010-4044-9037</a>
         </div>
       </div>
       <div class="team-card">
         <div class="team-card-accent"></div>
-        <p class="team-role">Sr. Associate</p>
+        <p class="team-role">Sr. Manager</p>
         <h2 class="team-name">방소진</h2>
         <p class="team-name-en">Amy Bang</p>
-        <div class="team-career-summary"><span class="career-badge">경력 6년</span><span class="career-badge">Cushman & Wakefield</span><span class="career-badge">UPS Korea</span><span class="career-badge">CPIM</span></div>
+        <div class="team-career-summary"><span class="career-badge">경력 7년</span><span class="career-badge">Cushman & Wakefield</span><span class="career-badge">UPS Korea</span><span class="career-badge">CPIM</span></div>
         <p class="team-bio">Cushman &amp; Wakefield Korea의 국내 첫 Industrial Sector 리서치 담당자로서 물류센터 및 데이터센터의 초기 데이터베이스를 구축하고 전국 단위로 시장 조사를 확대했습니다. 국내 자문사 최초로 전라권 물류 시장 보고서를 발간하는 등 다양한 Special Report와 Issue Report를 통해 시장에 필요한 인사이트를 선도적으로 제공해왔습니다.</p>
         <div class="team-contact">
-          <a href="/cdn-cgi/l/email-protection#08696571266a69666f487d717d6661266961"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg><span class="__cf_email__" data-cfemail="6b0a061245090a050c2b1e121e0502450a02">[email&#160;protected]</span></a>
+          <a href="mailto:amy.bang@uyuni.ai"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg>amy.bang@uyuni.ai</a>
           <a href="tel:01026252593"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H3a1 0 00-1 1v1c0 6 5 11 11 11h1a1 1 0 001-1v-2l-3-1-1 1a9 9 0 01-4-4l1-1-1-3z"/></svg>010-2625-2593</a>
         </div>
       </div>
@@ -434,8 +449,8 @@
     <div class="recognition-grid fade-up">
       <div class="recognition-card"><div class="rec-logo-area"><span style="font-size:18px;color:#1a5276;font-weight:700;">kt estate</span></div><h3 class="rec-title">KT Estate 투자심의위원</h3><p class="rec-desc">KT 계열 부동산 전문회사의 물류센터 투자 외부 심의위원으로서 관련 투자 자문을 제공하고 있습니다.</p><p class="rec-since">2024년 5월 ~ 현재</p></div>
       <div class="recognition-card"><div class="rec-logo-area"><span style="color:#c0392b;font-size:13px;">SPI Seoul Property Insight</span></div><h3 class="rec-title">Seoul Property Insight 정기 기고</h3><p class="rec-desc">상업용 부동산 전문가 필독 매체 SPI에 물류센터 관련 월 1회 정기 기고 중. 누적 36건(2026년 1월 기준).</p><p class="rec-since">2023년 1월 ~ 현재</p></div>
-      <div class="recognition-card"><div class="rec-logo-area"><span style="font-size:12px;color:#2e86c1;line-height:1.4;">한국금융투자협회<br>금융투자교육원</span></div><h3 class="rec-title">금융투자교육원 강의</h3><p class="rec-desc">증권사, 은행, 보험사, 자산운용사 등 각종 금융사 실무진을 대상으로 물류센터 투자 강의를 진행합니다.</p><p class="rec-since">정기 강의 진행 중</p></div>
-      <div class="recognition-card"><div class="rec-logo-area"><span style="font-size:14px;color:#117864;">물류신문</span></div><h3 class="rec-title">물류신문 세미나 및 기사 집필</h3><p class="rec-desc">물류신문 창간 27주년 기념 세미나 강연 및 2025년 물류전략 기획특집 기사를 집필하였습니다.</p><p class="rec-since">2024년 11월 강연</p></div>
+      <div class="recognition-card"><div class="rec-logo-area"><span style="font-size:12px;color:#2e86c1;line-height:1.4;">한국금융투자협회<br>금융투자교육원</span></div><h3 class="rec-title">금융투자교육원 강의</h3><p class="rec-desc">증권사, 은행, 보험사, 자산운용사 등 각종 금융사 실무진을 대상으로 물류센터 투자 강의를 진행합니다.</p></div>
+      <div class="recognition-card"><div class="rec-logo-area"><span style="font-size:14px;color:#117864;">물류신문</span></div><h3 class="rec-title">물류신문 세미나 및 기사 집필</h3><p class="rec-desc">물류신문 창간 27주년 기념 세미나 강연 및 2025년 물류전략 기획특집 기사를 집필하였습니다.</p></div>
     </div>
   </section>
 
@@ -446,13 +461,13 @@
       <p>물류 부동산에 관한 어떠한 문의도 환영합니다.<br>최고의 전문가 팀이 최적의 솔루션을 제공합니다.</p>
       <div class="contact-info-grid">
         <div class="contact-info-item"><label>Address</label><p>경기 성남시 분당구 판교역로 136<br>판교역 힐스테이트 1층 1056호</p></div>
-        <div class="contact-info-item"><label>Victor Jun 대표이사</label><a href="/cdn-cgi/l/email-protection#4e38272d3a213c60243b200e3b373b2027602f27"><span class="__cf_email__" data-cfemail="77011e14031805591d021937020e02191e59161e">[email&#160;protected]</span></a><a href="tel:01040449037" style="margin-top:4px">010-4044-9037</a></div>
-        <div class="contact-info-item"><label>Amy Bang Sr. Associate</label><a href="/cdn-cgi/l/email-protection#77161a0e591516191037020e02191e59161e"><span class="__cf_email__" data-cfemail="81e0ecf8afe3e0efe6c1f4f8f4efe8afe0e8">[email&#160;protected]</span></a><a href="tel:01026252593" style="margin-top:4px">010-2625-2593</a></div>
+        <div class="contact-info-item"><label>전용민 대표이사</label><a href="mailto:victor.jun@uyuni.ai" style="display:block">victor.jun@uyuni.ai</a><a href="tel:01040449037" style="display:block;margin-top:6px">010-4044-9037</a></div>
+        <div class="contact-info-item"><label>방소진 차장</label><a href="mailto:amy.bang@uyuni.ai" style="display:block">amy.bang@uyuni.ai</a><a href="tel:01026252593" style="display:block;margin-top:6px">010-2625-2593</a></div>
       </div>
     </div>
     <footer>
-      <div class="footer-logo"><div class="footer-logo-name">uyuni</div><div class="footer-logo-sub">Logistics Real Estate</div></div>
-      <p>© 2026 Uyuni Inc. All rights reserved. · uyuni.ai</p>
+      <div class="footer-logo"><img class="footer-logo-img" alt="uyuni" style="height:40px;filter:brightness(0) invert(1);opacity:0.88;"></div>
+      <p>© 2026 Uyuni Inc. All rights reserved.</p>
     </footer>
   </section>
 </div>
@@ -462,6 +477,8 @@
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
+
+  document.querySelector('.footer-logo-img').src = document.querySelector('.nav-logo img').src;
 
   const fadeEls = document.querySelectorAll('.fade-up');
   const observer = new IntersectionObserver((entries) => {
@@ -473,6 +490,20 @@
     });
   }, { threshold: 0.08 });
   fadeEls.forEach(el => observer.observe(el));
+
+  /* Mobile Menu */
+  function toggleMobileMenu(){
+    document.getElementById('hamburger').classList.toggle('active');
+    document.getElementById('navOverlay').classList.toggle('active');
+    document.body.style.overflow=document.getElementById('navOverlay').classList.contains('active')?'hidden':'';
+  }
+  function closeMobileMenu(){
+    document.getElementById('hamburger').classList.remove('active');
+    document.getElementById('navOverlay').classList.remove('active');
+    document.body.style.overflow='';
+  }
+  document.querySelectorAll('#navOverlay a').forEach(a=>a.addEventListener('click',closeMobileMenu));
+  window.addEventListener('resize',()=>{if(window.innerWidth>1024)closeMobileMenu();});
 </script>
 </body>
 
