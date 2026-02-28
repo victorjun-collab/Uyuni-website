@@ -177,7 +177,7 @@
     .hero-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold);}
     .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:300;line-height:1.0;color:var(--white);margin-bottom:32px;letter-spacing:-1px;}
     .hero-title em{font-style:italic;color:var(--silver-light);}
-    .hero-desc{font-size:15px;line-height:1.8;color:var(--silver);max-width:520px;font-weight:300;margin-bottom:48px;}
+    .hero-desc{font-size:15px;line-height:1.8;color:var(--silver);max-width:520px;font-weight:300;margin-bottom:48px;word-break:keep-all;}
     .hero-cta{display:inline-flex;align-items:center;gap:16px;text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--white);border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:6px;transition:border-color 0.25s,gap 0.25s;}
     .hero-cta:hover{border-color:var(--white);gap:22px;}
     .hero-scroll-indicator{position:absolute;right:60px;bottom:60px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:12px;}
@@ -346,7 +346,7 @@
     <div class="hero-content">
       <p class="hero-eyebrow">물류 부동산 전문 어드바이저</p>
       <h1 class="hero-title">Clarity in<br><em>Complex Markets</em></h1>
-      <p class="hero-desc">우유니는 국내 물류 부동산 시장에서 가장 신뢰받는 전문 자문사입니다. 매입·매각부터 임대차, 개발 PM, 리서치 컨설팅까지 종합적인 서비스를 제공합니다.</p>
+      <p class="hero-desc">우유니는 국내 물류 부동산 시장에서 가장 신뢰받는 전문 자문사입니다. 매입·매각부터<br>임대차, 개발 PM, 리서치 컨설팅까지 종합적인 서비스를 제공합니다.</p>
       <a href="#services" class="hero-cta">서비스 알아보기 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
     <div class="hero-scroll-indicator"><div class="scroll-line"></div><span>Scroll</span></div>
@@ -400,11 +400,11 @@
       <p class="section-header-right">매입·매각, 임대차, 개발 PM, 컨설팅에 걸쳐<br>다양한 물류 부동산 프로젝트를 성공적으로 수행</p>
     </div>
     <div class="fade-up">
-      <div class="project-row"><span class="project-index">01</span><div class="project-name">석남 복합물류 매입 자문<span>인천광역시 서구 석남동 · 148,238㎡</span></div><span class="project-tag tag-sales">Sales Advisory</span><div class="project-meta"><strong>2,450억 원</strong>Brookfield 자산운용 · 2024.07–2025.02</div></div>
-      <div class="project-row"><span class="project-index">02</span><div class="project-name">의약품 유통센터 임대차<span>경기도 김포시</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 600평</strong>Pebblestone (Blackstone) · 2024.10–2025.03</div></div>
-      <div class="project-row"><span class="project-index">03</span><div class="project-name">저온 물류센터 임대차<span>경기도 이천시 · 임대면적 6,000평</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 3,087평 + 3,000평</strong>ESR 켄달스퀘어 · 2024.02–2025.07</div></div>
-      <div class="project-row"><span class="project-index">04</span><div class="project-name">경산 물류센터 시장조사 자문<span>외국계 투자사 매입 관련</span></div><span class="project-tag tag-consulting">Consulting</span><div class="project-meta"><strong>—</strong>외국계 투자사 · 2025.04–2025.05</div></div>
-      <div class="project-row"><span class="project-index">05</span><div class="project-name">인천 항동 저온 물류센터 임대차<span>3PL 업체 · 임대면적 약 1,200평</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 1,200평</strong>— · 2025.07–2025.12</div></div>
+      <div class="project-row"><span class="project-index">01</span><div class="project-name">석남 복합물류 매입 자문<span>인천광역시 서구 석남동</span></div><span class="project-tag tag-sales">Sales Advisory</span><div class="project-meta">2024.07–2025.02</div></div>
+      <div class="project-row"><span class="project-index">02</span><div class="project-name">의약품 유통센터 임대차<span>경기도 김포시</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta">2024.10–2025.03</div></div>
+      <div class="project-row"><span class="project-index">03</span><div class="project-name">저온 물류센터 임대차 (1,2,3차)<span>경기도 이천시</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta">2024.02–2025.07</div></div>
+      <div class="project-row"><span class="project-index">04</span><div class="project-name">경산 물류센터 시장조사 자문<span>외국계 투자사 매입 관련</span></div><span class="project-tag tag-consulting">Consulting</span><div class="project-meta">2025.04–2025.05</div></div>
+      <div class="project-row"><span class="project-index">05</span><div class="project-name">인천 항동 저온 물류센터 임대차<span>3PL 업체</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta">2025.07–2025.12</div></div>
     </div>
   </section>
 

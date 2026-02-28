@@ -104,7 +104,7 @@
     }
     .panel-desc{
       font-size:13px;font-weight:300;color:rgba(220,228,236,0.85);line-height:1.75;
-      max-width:320px;margin-bottom:36px;
+      max-width:320px;margin-bottom:36px;word-break:keep-all;
       opacity:0;transform:translateY(10px);
       transition:opacity 0.4s 0.08s,transform 0.4s 0.08s;
     }
@@ -177,7 +177,7 @@
     .hero-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold);}
     .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:300;line-height:1.0;color:var(--white);margin-bottom:32px;letter-spacing:-1px;}
     .hero-title em{font-style:italic;color:var(--silver-light);}
-    .hero-desc{font-size:15px;line-height:1.8;color:var(--silver);max-width:520px;font-weight:300;margin-bottom:48px;}
+    .hero-desc{font-size:15px;line-height:1.8;color:var(--silver);max-width:520px;font-weight:300;margin-bottom:48px;word-break:keep-all;}
     .hero-cta{display:inline-flex;align-items:center;gap:16px;text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--white);border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:6px;transition:border-color 0.25s,gap 0.25s;}
     .hero-cta:hover{border-color:var(--white);gap:22px;}
     .hero-scroll-indicator{position:absolute;right:60px;bottom:60px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:12px;}
@@ -322,7 +322,7 @@
     .h-hero-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold);}
     .h-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:300;line-height:1.0;color:var(--white);margin-bottom:32px;letter-spacing:-1px;}
     .h-hero-title em{font-style:italic;color:rgba(201,169,110,0.85);}
-    .h-hero-desc{font-size:15px;line-height:1.8;color:rgba(184,196,208,0.85);max-width:520px;font-weight:300;margin-bottom:48px;}
+    .h-hero-desc{font-size:15px;line-height:1.8;color:rgba(184,196,208,0.85);max-width:520px;font-weight:300;margin-bottom:48px;word-break:keep-all;}
     .h-hero-cta{display:inline-flex;align-items:center;gap:16px;text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--white);border-bottom:1px solid rgba(201,169,110,0.35);padding-bottom:6px;transition:border-color 0.25s,gap 0.25s;}
     .h-hero-cta:hover{border-color:var(--gold);gap:22px;}
 
@@ -454,7 +454,7 @@
     <div class="panel-content">
       <p class="panel-label">Sector 02</p>
       <h2 class="panel-title">Hotels &<br>Branded<br>Properties</h2>
-      <p class="panel-desc">브랜디드 레지던스 개발, 호텔 투자 분석,<br>브랜드 선정 및 HMA 협상까지<br>호스피탈리티 부동산 전문 자문</p>
+      <p class="panel-desc">호텔 개발의 사업기획, 브랜딩, 부지매입, 인허가, 공간기획, 손익추정<br>투자분석, 매입자문, 브랜드(운영사) 선정<br>HMA 제작 및 협상, 운영관리</p>
       <span class="panel-cta">
         Enter
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
@@ -498,7 +498,7 @@
     <div class="hero-content">
       <p class="hero-eyebrow">물류 부동산 전문 어드바이저</p>
       <h1 class="hero-title">Clarity in<br><em>Complex Markets</em></h1>
-      <p class="hero-desc">우유니는 국내 물류 부동산 시장에서 가장 신뢰받는 전문 자문사입니다. 매입·매각부터 임대차, 개발 PM, 리서치 컨설팅까지 종합적인 서비스를 제공합니다.</p>
+      <p class="hero-desc">우유니는 국내 물류 부동산 시장에서 가장 신뢰받는 전문 자문사입니다. 매입·매각부터<br>임대차, 개발 PM, 리서치 컨설팅까지 종합적인 서비스를 제공합니다.</p>
       <a href="#services" class="hero-cta">서비스 알아보기 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
     <div class="hero-scroll-indicator"><div class="scroll-line"></div><span>Scroll</span></div>
@@ -552,12 +552,12 @@
       <p class="section-header-right">매입·매각, 임대차, 개발 PM, 컨설팅에 걸쳐<br>다양한 물류 부동산 프로젝트를 성공적으로 수행</p>
     </div>
     <div class="fade-up">
-      <div class="project-row"><span class="project-index">01</span><div class="project-name">석남 복합물류 매입 자문<span>인천광역시 서구 석남동 · 148,238㎡</span></div><span class="project-tag tag-sales">Sales Advisory</span><div class="project-meta"><strong>2,450억 원</strong>Brookfield 자산운용 · 2024.07–2025.02</div></div>
-      <div class="project-row"><span class="project-index">02</span><div class="project-name">이지메디컴 의약품 유통센터 임대차<span>경기도 김포시 · 김포 성광물류센터</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 600평</strong>Pebblestone (Blackstone) · 2024.10–2025.03</div></div>
-      <div class="project-row"><span class="project-index">03</span><div class="project-name">엠지물류 저온 물류센터 임대차<span>경기도 이천시 · 켄달스퀘어 수정DC</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 3,087평 + 3,000평</strong>ESR 켄달스퀘어 · 2024.02–2025.07</div></div>
-      <div class="project-row"><span class="project-index">04</span><div class="project-name">로지스포인트 여주 개발 PM<span>경기도 여주시 삼교동 · 130,990㎡</span></div><span class="project-tag tag-dev">Development PM</span><div class="project-meta"><strong>약 2,000억 원</strong>마스턴투자운용 · 2021–2023</div></div>
-      <div class="project-row"><span class="project-index">05</span><div class="project-name">경산 물류센터 시장조사 자문<span>외국계 투자사 매입 관련</span></div><span class="project-tag tag-consulting">Consulting</span><div class="project-meta"><strong>—</strong>외국계 투자사 · 2025.04–2025.05</div></div>
-      <div class="project-row"><span class="project-index">06</span><div class="project-name">인천 항동 저온 물류센터 임대차<span>3PL 업체 · 임대면적 약 1,200평</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta"><strong>약 1,200평</strong>— · 2025.07–2025.12</div></div>
+      <div class="project-row"><span class="project-index">01</span><div class="project-name">석남 복합물류 매입 자문<span>인천광역시 서구 석남동</span></div><span class="project-tag tag-sales">Sales Advisory</span><div class="project-meta">2024.07–2025.02</div></div>
+      <div class="project-row"><span class="project-index">02</span><div class="project-name">이지메디컴 의약품 유통센터 임대차<span>경기도 김포시 · 김포 성광물류센터</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta">2024.10–2025.03</div></div>
+      <div class="project-row"><span class="project-index">03</span><div class="project-name">엠지물류 저온 물류센터 임대차 (1,2,3차)<span>경기도 이천시 · 켄달스퀘어 수정DC</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta">2024.02–2025.07</div></div>
+      <div class="project-row"><span class="project-index">04</span><div class="project-name">로지스포인트 여주 개발 PM<span>경기도 여주시 삼교동 · 130,990㎡</span></div><span class="project-tag tag-dev">Development PM</span><div class="project-meta">마스턴투자운용 · 2021–2023</div></div>
+      <div class="project-row"><span class="project-index">05</span><div class="project-name">경산 물류센터 시장조사 자문<span>외국계 투자사 매입 관련</span></div><span class="project-tag tag-consulting">Consulting</span><div class="project-meta">2025.04–2025.05</div></div>
+      <div class="project-row"><span class="project-index">06</span><div class="project-name">인천 항동 저온 물류센터 임대차<span>3PL 업체</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta">2025.07–2025.12</div></div>
     </div>
   </section>
 
@@ -641,7 +641,7 @@
     <div class="h-hero-content">
       <p class="h-hero-eyebrow">호텔 & 브랜디드 프로퍼티 전문 어드바이저</p>
       <h1 class="h-hero-title">Where Vision<br>Meets <em>Hospitality</em></h1>
-      <p class="h-hero-desc">브랜디드 레지던스 개발부터 호텔 투자 분석, 브랜드 선정, HMA 협상까지 — 국내에서 가장 드문 호스피탈리티 부동산 전문가와 함께하십시오.</p>
+      <p class="h-hero-desc">호텔 개발의 사업기획, 브랜딩, 부지매입, 인허가, 공간기획, 손익추정 부터 투자분석, 매입자문, 브랜드(운영사) 선정, HMA 제작 및 협상, 운영관리, 인력 선별까지 — 호텔 개발 전과정을 수행할 수 있는 전문가와 함께 하십시오.</p>
       <a href="#h-services" class="h-hero-cta">서비스 알아보기 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
     <div class="hero-scroll-indicator"><div class="scroll-line" style="background:linear-gradient(to bottom,var(--gold),transparent);"></div><span style="color:var(--gold);">Scroll</span></div>
@@ -651,12 +651,12 @@
   <section id="h-intro">
     <div class="fade-up">
       <p class="section-label">About</p>
-      <h2>국내에서 가장 드문<br>호스피탈리티<br>부동산 전문가</h2>
+      <h2>국내에서 보기 드문<br>경력의 호스피탈리티<br>전문가</h2>
     </div>
     <div class="fade-up">
-      <p>한송이 컨설턴트는 호텔 개발 전 과정과 글로벌 소싱을 10년 이상 직접 수행해온 호스피탈리티 전문가입니다. 부동산 투자와 호텔 운영에 대한 깊이 있는 전문 역량을 함께 갖추고 있습니다.</p>
-      <p>호텔신라에서 신라모노그램 브랜드 전략·기획·개발을 총괄하고, 삼성그룹사 부동산 커미티에 호텔신라 단독대표로 참여하는 등 국내 최고 수준의 호스피탈리티 트랙 레코드를 보유하고 있습니다.</p>
-      <p>현재 우유니에서 SK 계열사 브랜디드 레지던스 타당성 조사, 강남 럭셔리 부티크 호텔 개발 PM, 5성급 HMA 자문 등 다양한 프로젝트를 수행하고 있습니다.</p>
+      <p>한송이 이사는 국내 Top-tier 호스피탈리티 기업에서 10년 이상 호텔 개발과 글로벌 호텔 소싱을 수행한 호스피탈리티 전문가입니다. 호텔 개발 전과정을 단독 PM, 국내 뿐만 아니라 중국, 베트남, 미국 등 해외 호텔 개발, 하이엔드 브랜드의 호텔과 브랜디드 프라퍼티 개발(시니어 하우징, 레지던스)의 과정을 수행해 본 All-rounder 호스피탈리티 전문가로서 전 영역에서 깊이 있는 경험과 역량을 갖추고 있습니다.</p>
+      <p>호텔신라의 호텔 개발 조직에서 최장 기간 실무를 봐오며, 매년 수백건의 호텔 투자/개발 건을 검토, 신라모노그램 브랜드 론칭, 삼성그룹의 부동산 개발 커미티에서 호텔신라 단독대표, 아부다비투자청 방한 시 한국 호텔 전문가 대표로 단독 미팅, 삼성그룹 글로벌 호텔 소싱 총괄(전세계 2천여개 호텔 계약 체결), 국내외 200여개 호텔을 직접 답사하였으며, 200건 이상의 호텔 및 브랜디드 프라퍼티 개발/투자 건을 검토, 1천실 이상 대규모 호텔 개발, 아만, 만다린오리엔탈 등 Ultra Luxury 호텔 답사/보고, 국내 호텔 기업 최초로 브랜드호텔 위탁운영계약(HMA) 체결, 호텔 자산 전문가로서는 국내 최고 수준의 호스피탈리티 트랙 레코드를 보유하고 있습니다.</p>
+      <p>우유니 합류 전, SK 계열사에 브랜디드 레지던스 개발컨셉 기획&amp;타당성 조사, 5성급 HMA 자문, CBD/명동 호텔 매입자문을 하였으며, 현재 우유니에서는 럭셔리 부티크 메디텔 개발 PM, GBD 호텔 매입자문 등 호스피탈리티 자산 전문가로서 다양한 프로젝트를 수행하고 있습니다.</p>
     </div>
   </section>
 
@@ -664,31 +664,30 @@
   <section id="h-services">
     <div class="section-header fade-up">
       <div class="section-header-left"><p class="section-label">Expertise</p><h2>호스피탈리티<br>전문 서비스</h2></div>
-      <p class="section-header-right">브랜디드 레지던스 개발부터 호텔 투자 분석,<br>브랜드 선정 및 계약 관리까지 One-stop 자문</p>
+      <p class="section-header-right">사업기획, 브랜딩, 부지매입, 인허가, 공간기획, 손익추정 부터 투자분석, 매입자문, 브랜드(운영사) 선정, HMA 제작 및 협상, 운영관리, 인력 선별 까지 Seamless 자문</p>
     </div>
     <div class="h-services-grid fade-up">
       <div class="h-service-card">
         <span class="h-service-num">01</span>
-        <h3 class="h-service-title">자산 개발<br>Branded Property Development</h3>
+        <h3 class="h-service-title">자산 개발<br>Property Development</h3>
         <p class="h-service-desc">재무 계획 수립부터 공간·상품 기획, 인허가 전략, 운영 세팅까지 개발 전 과정의 전략 설계 및 실행을 리드합니다.</p>
         <ul class="h-service-items">
           <li>시장 분석 및 실물 자산 실사</li>
           <li>사업 구조화 및 거래 실행</li>
           <li>재무 계획 수립 및 공간·상품 기획</li>
           <li>인허가 전략 수립 및 운영 세팅</li>
-          <li>브랜디드 레지던스 개발 전략 수립</li>
         </ul>
       </div>
       <div class="h-service-card">
         <span class="h-service-num">02</span>
-        <h3 class="h-service-title">호텔 투자 분석<br>Hotel Investment Analysis</h3>
+        <h3 class="h-service-title">투자 분석<br>Hotel Investment Analysis</h3>
         <p class="h-service-desc">시장성, 운영 경쟁력, 재무 수익성 등을 통합 분석하여 투자 타당성을 다각도로 진단합니다.</p>
         <ul class="h-service-items">
           <li>종합 타당성 조사(Feasibility Study)</li>
           <li>시장 분석 및 경쟁 현황 분석</li>
           <li>실물 자산 실사 및 평가</li>
           <li>수익성 시뮬레이션 및 딜 실행</li>
-          <li>180개 이상 호텔 개발 분석 경험</li>
+          <li>200개 이상 호텔 개발 분석 경험</li>
         </ul>
       </div>
       <div class="h-service-card">
@@ -697,10 +696,9 @@
         <p class="h-service-desc">특정 입지와 상품에 최적화된 브랜드 포지셔닝 및 시장 내 적합성에 대한 정교한 분석을 제공합니다.</p>
         <ul class="h-service-items">
           <li>브랜드 포지셔닝 및 시장 적합성 분석</li>
-          <li>브랜드·운영사 평가 및 선정</li>
+          <li>국내외 브랜드·운영사 평가 및 선정 (글로벌/로컬 체인 브랜드 특화)</li>
           <li>운영사 협상 및 계약 체결 주도</li>
-          <li>글로벌 2,000개+ 호텔 소싱 경험</li>
-          <li>신라모노그램 브랜드 전략·개발 총괄</li>
+          <li>신규 브랜드 기획·확장전략 자문</li>
         </ul>
       </div>
       <div class="h-service-card">
@@ -709,10 +707,11 @@
         <p class="h-service-desc">호텔 자산의 장기적 가치 제고를 위한 관리 구조 설계 및 운영 전략을 수립합니다.</p>
         <ul class="h-service-items">
           <li>운영사 가이드라인 제시 및 협상 리드</li>
-          <li>HMA / AMA 계약 체계 구축·검토·개선</li>
+          <li>HMA / LMA 계약 체계 구축·검토·개선</li>
           <li>호텔 자산관리 계약 표준 수립</li>
           <li>운영 전략 및 비즈니스 구조 설계</li>
-          <li>5성급 HMA 작성 및 협상 자문</li>
+          <li>인력 선별, 채용, 교육, SOP 자문</li>
+          <li>협력사, 외주사 선정 및 계약 관리</li>
         </ul>
       </div>
     </div>
@@ -727,7 +726,7 @@
       </div>
       <div class="why-top-right fade-up">
         <div class="stat-item"><div class="stat-num">10<span class="stat-unit">년+</span></div><div class="stat-label">호텔 개발 및<br>소싱 직접 수행 경력</div></div>
-        <div class="stat-item"><div class="stat-num">180<span class="stat-unit">개+</span></div><div class="stat-label">호텔 개발 프로젝트<br>검토·분석·답사 수행</div></div>
+        <div class="stat-item"><div class="stat-num">200<span class="stat-unit">개+</span></div><div class="stat-label">호텔 개발/투자 프로젝트<br>검토·분석·답사 수행</div></div>
         <div class="stat-item"><div class="stat-num">2,000<span class="stat-unit">개+</span></div><div class="stat-label">글로벌 호텔<br>기업계약 체결</div></div>
       </div>
     </div>
@@ -745,7 +744,7 @@
       <div class="h-why-card">
         <svg class="h-why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M18 4l4 8h9l-7 6 3 9-9-6-9 6 3-9-7-6h9z"/></svg>
         <h3>삼성그룹<br>부동산 커미티</h3>
-        <p>삼성그룹사 부동산 커미티에서 호텔신라 단독 대표로 2년간 포럼 참여. 그룹 차원의 부동산 전략 논의 주도.</p>
+        <p>삼성그룹사 부동산 커미티에서 호텔신라 단독 대표로 2년간 포럼 참여. 그룹 차원의 부동산 전략 논의.</p>
       </div>
       <div class="h-why-card">
         <svg class="h-why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M8 28V16M14 28V10M20 28V18M26 28V6"/><path d="M5 28h26"/></svg>
@@ -764,7 +763,7 @@
     <div class="h-team-grid fade-up">
       <div class="h-team-card">
         <div class="h-team-card-accent"></div>
-        <p class="team-role" style="color:var(--gold);">Hotel & Branded Properties Consultant</p>
+        <p class="team-role" style="color:var(--gold);">Hotels & Branded Properties Consultant</p>
         <h2 class="team-name" style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--white);margin-bottom:8px;">한송이</h2>
         <p class="team-name-en" style="font-family:'DM Sans',sans-serif;font-size:13px;color:var(--silver);font-weight:300;letter-spacing:1px;margin-bottom:32px;">Song Ye Han</p>
         <div class="team-career-summary">
@@ -774,39 +773,10 @@
           <span class="career-badge" style="background:rgba(201,169,110,0.12);color:rgba(201,169,110,0.9);">LG International</span>
         </div>
         <p class="team-bio" style="border-top-color:rgba(201,169,110,0.15);">
-          국내에서는 드물게 호텔 개발 전 과정과 글로벌 소싱을 10년 이상 직접 수행해온 호스피탈리티 전문가입니다. 호텔신라에서 글로벌 5성급 라이프스타일 브랜드 "신라모노그램" 기획·개발을 총괄하고, 삼성그룹사 부동산 커미티에 호텔신라 단독 대표로 참여했습니다. 'The Shilla' 브랜디드 레지던스 최초 프로젝트를 수주하는 등 부동산 투자와 호텔 운영에 대한 깊이 있는 전문 역량을 보유하고 있습니다.
+          국내 굴지의 대기업에서 트레이딩, 대체투자, 광구개발부터, 국제기구에서 조세연구를 거쳐, 국내 최고 호스피탈리티 기업에서 최장 기간 개발 실무를 거치고, 사내 최연소 파트장(글로벌 호텔 소싱)을 역임하는 등 전천후 경험과 역량을 갖추었습니다. 호텔 개발 전과정을 단독 PM, 해외 호텔 개발, 하이엔드 브랜디드 프라퍼티 개발의 과정을 수행, 보기 드문 경력을 가진 All-rounder 호스피탈리티 전문가로서 전 영역에서 깊이 있는 경험과 역량을 갖추고 있습니다.
         </p>
         <div class="team-contact" style="border-top-color:rgba(201,169,110,0.15);">
           <a href="/cdn-cgi/l/email-protection#7a0c13190e150854100f143a0f030f1413541b13" style="color:var(--silver);"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg>문의: <span class="__cf_email__" data-cfemail="3b4d52584f544915514e557b4e424e5552155a52">[email&#160;protected]</span></a>
-        </div>
-      </div>
-      <div class="h-team-card" style="background:#1a0f08;padding:40px 48px;">
-        <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:28px;">Professional Highlights</p>
-        <div class="h-highlights-grid" style="margin-top:0;">
-          <div class="h-highlight-item">
-            <div class="h-highlight-title">현재 수행 프로젝트</div>
-            <div class="h-highlight-desc">SK 계열사 브랜디드 레지던스 복합개발 타당성 조사 · 강남 럭셔리 부티크 호텔 개발 PM · 공공기관 5성급 HMA 작성 및 협상 자문</div>
-          </div>
-          <div class="h-highlight-item">
-            <div class="h-highlight-title">신라모노그램<br>브랜드 개발</div>
-            <div class="h-highlight-desc">다낭·강릉·시안 등 글로벌 5성급 라이프스타일 브랜드 전략·기획·개발 총괄</div>
-          </div>
-          <div class="h-highlight-item">
-            <div class="h-highlight-title">The Shilla<br>브랜디드 레지던스</div>
-            <div class="h-highlight-desc">신라 최상위 라인업 브랜디드 레지던스 개발 전략 수립 및 국내 최초 프로젝트 수주</div>
-          </div>
-          <div class="h-highlight-item">
-            <div class="h-highlight-title">글로벌 호텔<br>소싱 총괄</div>
-            <div class="h-highlight-desc">부서장으로서 전 세계 2,000개+ 호텔 기업계약 체결, 200개+ 현장실사, 인벤토리 6만→20만실 확장</div>
-          </div>
-          <div class="h-highlight-item">
-            <div class="h-highlight-title">삼성그룹<br>부동산 커미티</div>
-            <div class="h-highlight-desc">삼성그룹사 부동산 커미티 호텔신라 단독 대표 2년 활동</div>
-          </div>
-          <div class="h-highlight-item">
-            <div class="h-highlight-title">HMA 체계<br>표준 구축</div>
-            <div class="h-highlight-desc">호텔신라 위탁운영계약 및 계약체계 표준 구축, 개발 업무 플랫폼 고도화</div>
-          </div>
         </div>
       </div>
     </div>
@@ -819,8 +789,8 @@
       <p class="section-header-right">브랜디드 레지던스 개발, 호텔 PM,<br>HMA 자문 등 다양한 프로젝트 수행</p>
     </div>
     <div class="fade-up">
-      <div class="h-project-row"><span class="h-project-index">01</span><div class="h-project-name">SK 계열사 브랜디드 레지던스 복합개발 타당성 조사<span>국내 대기업 계열사 · 브랜디드 레지던스 복합개발</span></div><span class="h-project-tag tag-h-consulting">Consulting</span><div class="h-project-meta"><strong>完</strong>SK 계열사 · 2024–2025</div></div>
-      <div class="h-project-row"><span class="h-project-index">02</span><div class="h-project-name">강남 럭셔리 부티크 호텔 개발 PM<span>서울 강남 지역 · 개인 건축주 개발 프로젝트</span></div><span class="h-project-tag tag-h-pm">Dev. PM</span><div class="h-project-meta"><strong>진행 중</strong>개인 건축주 · Current</div></div>
+      <div class="h-project-row"><span class="h-project-index">01</span><div class="h-project-name">SK 계열사 브랜디드 레지던스 복합개발 타당성 조사<span>국내 대기업 계열사 · 브랜디드 레지던스 복합개발</span></div><span class="h-project-tag tag-h-consulting">Consulting</span><div class="h-project-meta"><strong>完</strong>SK 계열사</div></div>
+      <div class="h-project-row"><span class="h-project-index">02</span><div class="h-project-name">강남 럭셔리 부티크 메디텔 개발 PM<span>서울 강남 지역 · 개인 건축주 개발 프로젝트</span></div><span class="h-project-tag tag-h-pm">Dev. PM</span><div class="h-project-meta"><strong>진행 중</strong>개인 건축주 · Current</div></div>
       <div class="h-project-row"><span class="h-project-index">03</span><div class="h-project-name">공공기관 5성급 호텔 HMA 작성 및 협상 자문<span>국내 공공기관 · 위탁운영계약 체계 구축</span></div><span class="h-project-tag tag-h-hma">HMA Advisory</span><div class="h-project-meta"><strong>完</strong>공공기관 · 2024–2025</div></div>
       <div class="h-project-row"><span class="h-project-index">04</span><div class="h-project-name">신라모노그램 강릉 개발<span>경기도 · 글로벌 5성급 라이프스타일 브랜드</span></div><span class="h-project-tag tag-h-dev">Dev. Advisory</span><div class="h-project-meta"><strong>完</strong>호텔신라 (THE SHILLA)</div></div>
       <div class="h-project-row"><span class="h-project-index">05</span><div class="h-project-name">신라스테이 서부산 개발<span>부산 · 신라스테이 브랜드 개발 프로젝트</span></div><span class="h-project-tag tag-h-dev">Dev. Advisory</span><div class="h-project-meta"><strong>完</strong>호텔신라 (THE SHILLA)</div></div>
@@ -833,10 +803,10 @@
     <div class="contact-inner fade-up">
       <p class="section-label">Contact Us</p>
       <h2>호스피탈리티<br>비전을 현실로</h2>
-      <p>호텔 개발, 투자 분석, 브랜드 선정, HMA 협상까지<br>어떠한 문의도 환영합니다.</p>
+      <p>호텔 개발, 투자 분석, 브랜드 선정, HMA 협상 등<br>어떠한 문의도 환영합니다.</p>
       <div class="contact-info-grid" style="border-top-color:rgba(201,169,110,0.2);">
         <div class="contact-info-item"><label>Address</label><p>경기 성남시 분당구 판교역로 136<br>판교역 힐스테이트 1층 1056호</p></div>
-        <div class="contact-info-item"><label>Song Ye Han 컨설턴트</label><a href="/cdn-cgi/l/email-protection#a1d7c8c2d5ced38fcbd4cfe1d4d8d4cfc88fc0c8" style="color:var(--white);"><span class="__cf_email__" data-cfemail="52243b31263d207c38273c12272b273c3b7c333b">[email&#160;protected]</span></a></div>
+        <div class="contact-info-item"><label>한송이 이사</label><a href="/cdn-cgi/l/email-protection#a1d7c8c2d5ced38fcbd4cfe1d4d8d4cfc88fc0c8" style="color:var(--white);"><span class="__cf_email__" data-cfemail="52243b31263d207c38273c12272b273c3b7c333b">[email&#160;protected]</span></a></div>
         <div class="contact-info-item"><label>Website</label><a href="https://uyuni.ai" style="color:var(--white);">uyuni.ai</a></div>
       </div>
     </div>
