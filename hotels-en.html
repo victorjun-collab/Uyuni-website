@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Uyuni — Logistics Real Estate</title>
+  <title>Uyuni — Hotels &amp; Branded Properties</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <style>
@@ -173,11 +173,11 @@
     .hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 20%,rgba(13,27,42,0.65) 100%);}
     .hero-bottom-fade{position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,var(--navy),transparent);}
     .hero-content{position:relative;z-index:2;padding:0 60px 100px;max-width:900px;}
-    .hero-eyebrow{font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:16px;font-weight:400;font-style:italic;}
+    .hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:16px;}
     .hero-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold);}
     .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:300;line-height:1.0;color:var(--white);margin-bottom:32px;letter-spacing:-1px;}
     .hero-title em{font-style:italic;color:var(--silver-light);}
-    .hero-desc{font-size:15px;line-height:1.8;color:var(--silver);max-width:520px;font-weight:300;margin-bottom:48px;word-break:keep-all;}
+    .hero-desc{font-size:15px;line-height:1.8;color:var(--silver);max-width:520px;font-weight:300;margin-bottom:48px;}
     .hero-cta{display:inline-flex;align-items:center;gap:16px;text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--white);border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:6px;transition:border-color 0.25s,gap 0.25s;}
     .hero-cta:hover{border-color:var(--white);gap:22px;}
     .hero-scroll-indicator{position:absolute;right:60px;bottom:60px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:12px;}
@@ -298,31 +298,142 @@
     /* Standalone nav — always visible */
     nav { opacity:1 !important; pointer-events:all !important; }
     #site-logistics { display:block !important; }
+  
+    /* ═══ HOTEL OVERRIDES ═══ */
+    body{background:var(--hotel-bg);color:var(--silver);}
+
+    /* Hero */
+    #h-hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:flex-end;overflow:hidden;}
+    .h-hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,#1a0f08,#2d1e0f 45%,#3d2a14);}
+    .h-hero-glow{position:absolute;top:5%;right:10%;width:50vw;height:50vw;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.08) 0%,transparent 70%);pointer-events:none;animation:glow-drift 12s ease-in-out infinite alternate;}
+    @keyframes glow-drift{0%{transform:translate(0,0) scale(1);}100%{transform:translate(-4%,6%) scale(1.1);}}
+    .h-hero-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 15%,rgba(26,15,8,0.65) 100%);}
+    .h-hero-fade{position:absolute;bottom:0;left:0;right:0;height:55%;background:linear-gradient(to top,#1a0f08,transparent);}
+    .h-hero-content{position:relative;z-index:2;padding:0 60px 100px;max-width:900px;}
+    .h-hero-eyebrow{font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:16px;font-weight:400;font-style:italic;}
+    .h-hero-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold);}
+    .h-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,96px);font-weight:300;line-height:1.0;color:var(--white);margin-bottom:32px;letter-spacing:-1px;}
+    .h-hero-title em{font-style:italic;color:rgba(201,169,110,0.85);}
+    .h-hero-desc{font-size:15px;line-height:1.8;color:rgba(184,196,208,0.85);max-width:520px;font-weight:300;margin-bottom:48px;word-break:keep-all;}
+    .h-hero-cta{display:inline-flex;align-items:center;gap:16px;text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--white);border-bottom:1px solid rgba(201,169,110,0.35);padding-bottom:6px;transition:border-color 0.25s,gap 0.25s;}
+    .h-hero-cta:hover{border-color:var(--gold);gap:22px;}
+
+    /* Intro */
+    #h-intro{background:var(--hotel-bg);padding:100px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+    #h-intro .section-label{color:var(--gold);margin-bottom:20px;}
+    #h-intro h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.5vw,46px);font-weight:300;color:var(--white);line-height:1.25;}
+    #h-intro p{font-size:14px;line-height:1.9;color:var(--silver);font-weight:300;}
+    #h-intro p+p{margin-top:16px;}
+
+    /* Services (light bg) */
+    #h-services{background:#f7f4f0;padding:120px 60px;}
+    #h-services .section-header{border-bottom-color:#e0d8ce;}
+    #h-services .section-header-left .section-label{color:var(--gold-dark);}
+    #h-services .section-header-left h2{color:var(--text-dark);}
+    #h-services .section-header-right{color:var(--text-mid);}
+    .h-services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#e0d8ce;}
+    .h-service-card{background:#f7f4f0;padding:48px 44px;transition:background 0.35s,color 0.3s;position:relative;overflow:hidden;}
+    .h-service-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);}
+    .h-service-card:hover::before{transform:scaleX(1);}
+    .h-service-card:hover{background:var(--hotel-bg);}
+    .h-service-card:hover .h-service-num,
+    .h-service-card:hover .h-service-desc,
+    .h-service-card:hover .h-service-items li{color:var(--silver);}
+    .h-service-card:hover .h-service-title{color:var(--white);}
+    .h-service-num{font-family:'DM Mono',monospace;font-size:11px;color:#b0a090;margin-bottom:36px;display:block;transition:color 0.3s;}
+    .h-service-title{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;color:var(--text-dark);margin-bottom:16px;line-height:1.15;transition:color 0.3s;}
+    .h-service-desc{font-size:13px;color:var(--text-mid);line-height:1.75;margin-bottom:28px;font-weight:300;transition:color 0.3s;}
+    .h-service-items{list-style:none;border-top:1px solid #d8cfc4;padding-top:22px;}
+    .h-service-items li{font-size:12px;color:var(--text-mid);padding:7px 0;border-bottom:1px solid rgba(200,190,178,0.4);transition:color 0.3s;font-weight:300;}
+    .h-service-items li:last-child{border-bottom:none;}
+
+    /* Why / Stats */
+    #h-why{background:var(--hotel-mid);padding:100px 60px;}
+    #h-why .why-top{display:flex;justify-content:space-between;align-items:flex-start;gap:60px;padding-bottom:40px;}
+    #h-why .why-top-left .section-label{color:var(--gold);margin-bottom:20px;}
+    #h-why .why-top-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,3.5vw,48px);font-weight:300;color:var(--white);line-height:1.2;}
+    #h-why .why-top-right{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;align-items:start;padding-top:10px;}
+    #h-why .stat-item{border-left:1px solid rgba(201,169,110,0.25);padding-left:28px;}
+    #h-why .stat-num{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,3vw,56px);font-weight:300;color:var(--white);}
+    #h-why .stat-unit{font-size:0.45em;color:var(--gold);margin-left:2px;}
+    #h-why .stat-label{font-size:12px;color:var(--silver);line-height:1.6;font-weight:300;margin-top:8px;}
+    .h-why-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,169,110,0.15);margin-top:60px;}
+    .h-why-card{background:var(--hotel-mid);padding:40px 36px;transition:background 0.3s;}
+    .h-why-card:hover{background:rgba(201,169,110,0.08);}
+    .h-why-card h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--white);margin-bottom:12px;line-height:1.2;}
+    .h-why-card p{font-size:12px;color:var(--silver);line-height:1.8;font-weight:300;}
+    .h-why-card-icon{width:36px;height:36px;margin-bottom:24px;opacity:0.55;}
+
+    /* Team */
+    #h-team{background:var(--hotel-bg);padding:120px 60px;}
+    #h-team .section-header{border-bottom-color:rgba(201,169,110,0.2);}
+    #h-team .section-header-left .section-label{color:var(--gold);}
+    #h-team .section-header-left h2{color:var(--white);}
+    #h-team .section-header-right{color:var(--silver);}
+    .h-team-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+    .h-team-card{background:#221509;padding:56px;}
+    .h-team-card-accent{width:40px;height:2px;background:var(--gold);margin-bottom:32px;}
+    .h-highlights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,169,110,0.15);margin-top:48px;}
+    .h-highlight-item{background:#221509;padding:32px 28px;}
+    .h-highlight-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:500;color:var(--gold);margin-bottom:10px;}
+    .h-highlight-desc{font-size:12px;color:var(--silver);line-height:1.75;font-weight:300;}
+
+    /* Portfolio (azmt-inspired dark gallery) */
+    #h-portfolio{background:#111;padding:120px 60px;position:relative;overflow:hidden;}
+    #h-portfolio::before{content:'';position:absolute;top:0;left:0;width:40%;height:100%;background:repeating-linear-gradient(60deg,transparent,transparent 30px,rgba(201,169,110,0.03) 30px,rgba(201,169,110,0.03) 31px);pointer-events:none;}
+    #h-portfolio .section-header{border-bottom-color:rgba(201,169,110,0.15);}
+    #h-portfolio .section-header-left .section-label{color:var(--gold);}
+    #h-portfolio .section-header-left h2{color:var(--white);}
+    #h-portfolio .section-header-right{color:var(--silver);}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px;}
+    .portfolio-card{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:3/4;background:var(--hotel-mid);cursor:default;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
+    .portfolio-card:hover{transform:translateY(-6px);}
+    .portfolio-card-img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1),opacity 0.4s;opacity:0.85;}
+    .portfolio-card:hover .portfolio-card-img{transform:scale(1.06);opacity:1;}
+    .portfolio-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.15) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:28px;}
+    .portfolio-card-tag{display:inline-flex;align-items:center;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border:1px solid var(--gold);border-radius:2px;color:var(--gold);margin-bottom:12px;width:fit-content;}
+    .portfolio-card-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--white);line-height:1.25;margin-bottom:6px;}
+    .portfolio-card-sub{font-size:11px;color:var(--silver);font-weight:300;}
+    .portfolio-card-status{position:absolute;top:16px;right:16px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:2px;background:rgba(201,169,110,0.85);color:#1a0f08;font-weight:500;}
+
+    /* Contact */
+    #h-contact{background:var(--hotel-bg);padding:120px 60px 80px;position:relative;overflow:hidden;}
+    #h-contact::before{content:'';position:absolute;top:0;right:0;width:45%;height:100%;background:radial-gradient(ellipse at 80% 30%,rgba(201,169,110,0.04) 0%,transparent 70%);pointer-events:none;}
+    #h-contact .contact-inner .section-label{color:var(--gold);}
+    #h-contact .contact-inner h2{color:var(--white);}
+    #h-contact .contact-inner>p{color:var(--silver);}
+    #h-contact .contact-info-grid{border-top-color:rgba(201,169,110,0.2);}
+    #h-contact .contact-info-item label{color:var(--gold);}
+    #h-contact .contact-info-item p,#h-contact .contact-info-item a{color:var(--silver);}
+    #h-contact footer{border-top-color:rgba(201,169,110,0.15);}
+
+    /* Nav hotel mode */
+    #navbar{background:rgba(26,15,8,0.93);border-bottom-color:rgba(201,169,110,0.08);}
+    #navbar.scrolled{background:rgba(26,15,8,0.97);}
+    .nav-sector{color:var(--gold);}
+    .nav-links a{color:var(--silver);}
+    .nav-links a:hover{color:var(--gold);}
+
+
   </style>
   <link rel="stylesheet" href="responsive.css">
 </head>
-<body>
-
-  </style>
-</head>
-<body>
-
+<body class="hotel-page">
 <!-- NAV -->
 <nav id="navbar" class="visible scrolled">
   <a class="nav-logo" href="index.html">
     <img src="data:image/png;base64,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" alt="uyuni">
     <div class="nav-logo-divider"></div>
-    <span class="nav-sector">Logistics</span>
+    <span class="nav-sector">Hotels</span>
   </a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#why">Why Uyuni</a></li>
-    <li><a href="#track-record">Track Record</a></li>
-    <li><a href="#team">Team</a></li>
-    <li><a href="#recognition">Recognition</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="logistics-en.html" style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--silver);text-decoration:none;border:1px solid rgba(255,255,255,0.2);padding:5px 10px;">EN</a></li>
-    <li><a href="index.html" class="nav-switch-btn" style="text-decoration:none;">← Switch Sector</a></li>
+    <li><a href="#h-services">Services</a></li>
+    <li><a href="#h-why">Why Uyuni</a></li>
+    <li><a href="#h-portfolio">Portfolio</a></li>
+    <li><a href="#h-team">Team</a></li>
+    <li><a href="#h-contact">Contact</a></li>
+    <li><a href="hotels.html" style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--silver);text-decoration:none;border:1px solid rgba(255,255,255,0.2);padding:5px 10px;">KO</a></li>
+    <li><a href="index-en.html" class="nav-switch-btn" style="text-decoration:none;">&#8592; Switch Sector</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
     <span></span><span></span><span></span>
@@ -331,148 +442,254 @@
 <!-- Mobile Nav Overlay -->
 <div class="nav-overlay" id="navOverlay">
   <ul id="mobileNavLinks">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#why">Why Uyuni</a></li>
-    <li><a href="#track-record">Track Record</a></li>
-    <li><a href="#team">Team</a></li>
-    <li><a href="#recognition">Recognition</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="logistics-en.html" style="text-decoration:none;">English (EN)</a></li>
-    <li><a href="index.html" class="nav-switch-btn" style="text-decoration:none;">← Switch Sector</a></li>
+    <li><a href="#h-services">Services</a></li>
+    <li><a href="#h-why">Why Uyuni</a></li>
+    <li><a href="#h-portfolio">Portfolio</a></li>
+    <li><a href="#h-team">Team</a></li>
+    <li><a href="#h-contact">Contact</a></li>
+    <li><a href="hotels.html" style="text-decoration:none;">한국어 (KO)</a></li>
+    <li><a href="index-en.html" class="nav-switch-btn" style="text-decoration:none;">&#8592; Switch Sector</a></li>
   </ul>
 </div>
 
-<div id="site-logistics">
-<section id="hero">
-    <div class="hero-bg"></div><div class="hero-img"></div><div class="hero-vignette"></div><div class="hero-bottom-fade"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">물류 부동산 전문 어드바이저</p>
-      <h1 class="hero-title">Clarity in<br><em>Complex Markets</em></h1>
-      <p class="hero-desc">우유니는 국내 물류 부동산 시장에서 가장 신뢰받는 전문 자문사입니다. 매입·매각부터<br>임대차, 개발 PM, 리서치 컨설팅까지 종합적인 서비스를 제공합니다.</p>
-      <a href="#services" class="hero-cta">서비스 알아보기 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+<div id="site-hotels">
+
+  <!-- Hero -->
+  <section id="h-hero">
+    <div class="h-hero-bg"></div>
+    <div class="h-hero-glow"></div>
+    <div class="h-hero-vignette"></div>
+    <div class="h-hero-fade"></div>
+    <div class="h-hero-content">
+      <p class="h-hero-eyebrow">Hotels &amp; Branded Properties Advisor</p>
+      <h1 class="h-hero-title">Where Vision<br>Meets <em>Hospitality</em></h1>
+      <p class="h-hero-desc">From business planning, branding, site acquisition, permits, and space programming to P&L estimation, investment analysis, acquisition advisory, brand & operator selection, HMA drafting & negotiation, operations management, and talent recruitment — partner with a specialist who can execute the entire hotel development process.</p>
+      <a href="#h-services" class="h-hero-cta">Our Services <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
-    <div class="hero-scroll-indicator"><div class="scroll-line"></div><span>Scroll</span></div>
+    <div class="hero-scroll-indicator"><div class="scroll-line" style="background:linear-gradient(to bottom,var(--gold),transparent);"></div><span style="color:var(--gold);">Scroll</span></div>
   </section>
 
-  <section id="intro">
+  <!-- Intro -->
+  <section id="h-intro">
     <div class="fade-up">
-      <p class="section-label">About Uyuni</p>
-      <h2>독보적인 물류 부동산 전문 회사</h2>
+      <p class="section-label">About</p>
+      <h2>A Hospitality Expert<br>with a Rare Career<br>in Korea</h2>
     </div>
-    <div class="intro-right fade-up">
-      <p>우유니 주식회사는 물류 부동산 시장의 변화에 선제적으로 대응하며, 투자자와 임차인 모두에게 최적화된 전략적 파트너십을 제공합니다.</p>
-      <p>글로벌 투자회사들과의 긴밀한 협업을 통해 시장에서 가장 신뢰받는 물류 부동산 어드바이저로 자리매김하고 있습니다.</p>
-      <p>2024년 1월 설립 이후, 총 2,450억 원 규모의 매입 자문을 포함한 다수의 주요 프로젝트를 성공적으로 수행하였습니다.</p>
+    <div class="fade-up">
+      <p>Song Ye Han is a hospitality expert with over 10 years of hotel development and global hotel sourcing experience at Korea's top-tier hospitality company. An all-rounder who has independently PM'd the full hotel development cycle, executed hotel developments in China, Vietnam, and the U.S., and developed high-end branded properties (senior housing, residences) — with deep expertise across all areas of hospitality real estate.</p>
+      <p>With the longest tenure in hotel development at The Shilla Hotels & Resorts, she has reviewed hundreds of hotel investment and development cases annually, launched the Shilla Monogram brand, served as the sole Shilla Hotels representative at Samsung Group's real estate development committee, held exclusive meetings with ADIA's Korean delegation as the designated Korean hotel expert, oversaw Samsung Group's global hotel sourcing (contracting ~2,000 hotels worldwide), personally visited 200+ hotels, reviewed 200+ hotel and branded property development/investment cases, developed large-scale hotels of 1,000+ rooms, surveyed Ultra Luxury hotels including Aman and Mandarin Oriental, and concluded Korea's first branded hotel management agreement (HMA).</p>
+      <p>Prior to joining Uyuni, she provided branded residence development concept planning &amp; feasibility studies, 5-star HMA advisory, and CBD/Myeongdong hotel acquisition advisory to SK affiliates. At Uyuni, she continues to execute diverse hospitality asset projects including luxury boutique meditel development PM and GBD hotel acquisition advisory.</p>
     </div>
   </section>
 
-  <section id="services">
+  <!-- Services -->
+  <section id="h-services">
     <div class="section-header fade-up">
-      <div class="section-header-left"><p class="section-label">What We Do</p><h2>물류부동산<br>전문 서비스 제공</h2></div>
-      <p class="section-header-right">매입·매각 자문부터 임대차, 개발 PM, 리서치까지<br>물류 부동산 전 영역을 아우르는 종합 서비스</p>
+      <div class="section-header-left"><p class="section-label">Expertise</p><h2>Hospitality<br>Specialist Services</h2></div>
+      <p class="section-header-right">Seamless advisory from business planning, branding, site acquisition, permits, and P&L estimation to investment analysis, brand selection, HMA negotiation, operations management, and talent recruitment</p>
     </div>
-    <div class="services-grid fade-up">
-      <div class="service-card"><span class="service-num">01</span><h3 class="service-title">매입매각<br>자문</h3><p class="service-desc">Sales Advisory</p><ul class="service-items"><li>매입매각 계획 수립</li><li>임대 전략 수립</li><li>시장 실사</li><li>매매 전반 협상 지원</li></ul></div>
-      <div class="service-card"><span class="service-num">02</span><h3 class="service-title">임대차<br>자문</h3><p class="service-desc">Leasing Advisory</p><ul class="service-items"><li>잠재 임차사 발굴 및 임대 마케팅</li><li>임차 후보지 발굴</li><li>현장 실사 지원 및 질의 대응</li><li>임대차 전반 협상 지원</li></ul></div>
-      <div class="service-card"><span class="service-num">03</span><h3 class="service-title">개발<br>PM</h3><p class="service-desc">Development Management</p><ul class="service-items"><li>입지 분석, 타당성 조사</li><li>인허가 절차 지원</li><li>설계 및 시공 진행 관리</li><li>공사 일정 및 프로세스 관리</li></ul></div>
-      <div class="service-card"><span class="service-num">04</span><h3 class="service-title">리서치 &<br>컨설팅</h3><p class="service-desc">Research & Consulting</p><ul class="service-items"><li>데이터 분석 및 보고서 작성</li><li>시각화(Visualization)</li><li>국토교통부 데이터 자동화</li><li>신속한 데이터 수집 및 가공</li></ul></div>
+    <div class="h-services-grid fade-up">
+      <div class="h-service-card">
+        <span class="h-service-num">01</span>
+        <h3 class="h-service-title">Property<br>Development</h3>
+        <p class="h-service-desc">We lead the full development process from financial planning to space & product programming, permitting strategy, and operations setup.</p>
+        <ul class="h-service-items">
+          <li>Market analysis & physical asset due diligence</li>
+          <li>Deal structuring & transaction execution</li>
+          <li>Financial planning & space/product programming</li>
+          <li>Permitting strategy & operations setup</li>
+        </ul>
+      </div>
+      <div class="h-service-card">
+        <span class="h-service-num">02</span>
+        <h3 class="h-service-title">Hotel Investment<br>Analysis</h3>
+        <p class="h-service-desc">We conduct integrated analysis of market viability, operational competitiveness, and financial returns for multi-dimensional investment feasibility.</p>
+        <ul class="h-service-items">
+          <li>Comprehensive feasibility study</li>
+          <li>Market analysis & competitive landscape</li>
+          <li>Physical asset due diligence & valuation</li>
+          <li>Profitability simulation & deal execution</li>
+          <li>200+ hotel development analysis experience</li>
+        </ul>
+      </div>
+      <div class="h-service-card">
+        <span class="h-service-num">03</span>
+        <h3 class="h-service-title">Brand Analysis &<br>Operator Communication</h3>
+        <p class="h-service-desc">We provide precise analysis of brand positioning and market fit optimized for specific locations and products.</p>
+        <ul class="h-service-items">
+          <li>Brand positioning & market fit analysis</li>
+          <li>Domestic & international brand/operator evaluation & selection (global/local chain specialist)</li>
+          <li>Operator negotiation & contract execution</li>
+          <li>New brand planning & expansion strategy advisory</li>
+        </ul>
+      </div>
+      <div class="h-service-card">
+        <span class="h-service-num">04</span>
+        <h3 class="h-service-title">Hotel Asset &<br>Contract Management</h3>
+        <p class="h-service-desc">We design management structures and operational strategies to enhance the long-term value of hotel assets.</p>
+        <ul class="h-service-items">
+          <li>Operator guideline design & negotiation lead</li>
+          <li>HMA / LMA contract framework design, review & improvement</li>
+          <li>Hotel asset management contract standards</li>
+          <li>Operational strategy & business structure design</li>
+          <li>Talent selection, recruitment, training & SOP advisory</li>
+          <li>Vendor & outsourcing selection and contract management</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section id="why">
+  <!-- Why / Stats -->
+  <section id="h-why">
     <div class="why-top">
-      <div class="why-top-left fade-up"><p class="section-label">Why Uyuni</p><h2>시장을 가장<br>먼저 읽는<br>파트너</h2></div>
+      <div class="why-top-left fade-up">
+        <p class="section-label">Track Record</p>
+        <h2>Proven<br>Hospitality<br>Expertise</h2>
+      </div>
       <div class="why-top-right fade-up">
-        <div class="stat-item"><div class="stat-num">15<span class="stat-unit">년+</span></div><div class="stat-label">물류 부동산<br>투자 및 컨설팅 경력</div></div>
-        <div class="stat-item"><div class="stat-num">2,450<span class="stat-unit">억</span></div><div class="stat-label">매입자문<br>거래 규모</div></div>
-        <div class="stat-item"><div class="stat-num">36<span class="stat-unit">건+</span></div><div class="stat-label">SPI 물류센터<br>정기 기고 누적</div></div>
+        <div class="stat-item"><div class="stat-num">10<span class="stat-unit">yr+</span></div><div class="stat-label">Years of direct hotel<br>development & sourcing</div></div>
+        <div class="stat-item"><div class="stat-num">200<span class="stat-unit">+</span></div><div class="stat-label">Hotel development/investment<br>projects reviewed & inspected</div></div>
+        <div class="stat-item"><div class="stat-num">2,000<span class="stat-unit">+</span></div><div class="stat-label">Global hotel corporate<br>contracts concluded</div></div>
       </div>
     </div>
-    <div class="why-cards fade-up">
-      <div class="why-card"><svg class="why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><circle cx="18" cy="18" r="14"/><path d="M18 8v10l6 4"/></svg><h3>업계 최초<br>인사이트</h3><p>Seoul Property Insight 정기 기고를 통해 물류 부동산 시장의 트렌드와 전략을 업계에 먼저 전달합니다.</p></div>
-      <div class="why-card"><svg class="why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M6 28L14 18l8 6 8-12"/><circle cx="30" cy="12" r="2.5"/></svg><h3>글로벌<br>네트워크</h3><p>글로벌 투자회사들과의 긴밀한 협업 관계를 보유합니다.</p></div>
-      <div class="why-card"><svg class="why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><rect x="6" y="10" width="24" height="16" rx="2"/><path d="M12 10V8a2 2 0 014 0v2M20 10V8a2 2 0 014 0v2"/><path d="M6 16h24"/></svg><h3>데이터 기반<br>의사결정</h3><p>국토교통부 데이터 자동화 시스템을 통해 경쟁사 대비 신속하고 정확한 시장 분석을 제공합니다.</p></div>
-      <div class="why-card"><svg class="why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M18 4l4 8h9l-7 6 3 9-9-6-9 6 3-9-7-6h9z"/></svg><h3>검증된<br>전문성</h3><p>KT Estate 투자심의위원, 금융투자교육원 강의 등 업계에서 공인된 전문가로 활동 중입니다.</p></div>
+    <div class="h-why-cards fade-up">
+      <div class="h-why-card">
+        <svg class="h-why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M6 30V14l12-8 12 8v16"/><rect x="13" y="20" width="10" height="10"/></svg>
+        <h3>The Shilla<br>Brand Development</h3>
+        <p>Led the strategy, planning, and development of "Shilla Monogram," a global 5-star lifestyle brand. Executed multiple projects including Danang, Gangneung, and Xi'an.</p>
+      </div>
+      <div class="h-why-card">
+        <svg class="h-why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><circle cx="18" cy="18" r="13"/><path d="M11 18a7 7 0 0014 0M11 18a7 7 0 0114 0M18 5v26"/><path d="M7 12h22M7 24h22"/></svg>
+        <h3>Global Sourcing<br>Department Head</h3>
+        <p>As head of Samsung group's hotel sourcing division, concluded corporate contracts with 2,000+ hotels worldwide, expanding inventory from 60,000 to 200,000 rooms.</p>
+      </div>
+      <div class="h-why-card">
+        <svg class="h-why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M18 4l4 8h9l-7 6 3 9-9-6-9 6 3-9-7-6h9z"/></svg>
+        <h3>Samsung Group<br>Real Estate Committee</h3>
+        <p>Participated for 2 years as the sole Shilla Hotels representative at Samsung Group's real estate committee, engaging in group-level real estate strategy discussions.</p>
+      </div>
+      <div class="h-why-card">
+        <svg class="h-why-card-icon" viewBox="0 0 36 36" fill="none" stroke="#c9a96e" stroke-width="1.2"><path d="M8 28V16M14 28V10M20 28V18M26 28V6"/><path d="M5 28h26"/></svg>
+        <h3>First Branded<br>Residence Win</h3>
+        <p>Formulated the development strategy for The Shilla's top-tier branded residences and secured Korea's first branded residence project.</p>
+      </div>
     </div>
   </section>
 
-  <section id="track-record">
+  <!-- Portfolio (azmt-inspired image card gallery) -->
+  <section id="h-portfolio">
     <div class="section-header fade-up">
-      <div class="section-header-left"><p class="section-label">Track Record</p><h2>주요<br>수행 프로젝트</h2></div>
-      <p class="section-header-right">매입·매각, 임대차, 개발 PM, 컨설팅에 걸쳐<br>다양한 물류 부동산 프로젝트를 성공적으로 수행</p>
+      <div class="section-header-left"><p class="section-label">Portfolio</p><h2>Key<br>Projects</h2></div>
+      <p class="section-header-right">Diverse projects including branded residence development,<br>hotel PM, and HMA advisory</p>
     </div>
-    <div class="fade-up">
-      <div class="project-row"><span class="project-index">01</span><div class="project-name">석남 복합물류 매입 자문<span>인천광역시 서구 석남동</span></div><span class="project-tag tag-sales">Sales Advisory</span><div class="project-meta">2024.07–2025.02</div></div>
-      <div class="project-row"><span class="project-index">02</span><div class="project-name">의약품 유통센터 임대차<span>경기도 김포시</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta">2024.10–2025.03</div></div>
-      <div class="project-row"><span class="project-index">03</span><div class="project-name">저온 물류센터 임대차 (1,2,3차)<span>경기도 이천시</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta">2024.02–2025.07</div></div>
-      <div class="project-row"><span class="project-index">04</span><div class="project-name">경산 물류센터 시장조사 자문<span>외국계 투자사 매입 관련</span></div><span class="project-tag tag-consulting">Consulting</span><div class="project-meta">2025.04–2025.05</div></div>
-      <div class="project-row"><span class="project-index">05</span><div class="project-name">인천 항동 저온 물류센터 임대차<span>3PL 업체</span></div><span class="project-tag tag-leasing">Leasing Advisory</span><div class="project-meta">2025.07–2025.12</div></div>
+    <div class="portfolio-grid fade-up">
+      <div class="portfolio-card">
+        <div class="portfolio-card-img" style="background:linear-gradient(135deg,#2d1e0f 0%,#4a3520 50%,#1a0f08 100%);"></div>
+        <div class="portfolio-card-overlay">
+          <span class="portfolio-card-tag">Consulting</span>
+          <div class="portfolio-card-title">SK Affiliate Branded Residence<br>Mixed-Use Feasibility Study</div>
+          <div class="portfolio-card-sub">Major Korean conglomerate affiliate</div>
+          <div class="portfolio-card-sub">Period: March–June 2025</div>
+          <div class="portfolio-card-sub">Keywords: Korean conglomerate, branded residence, feasibility study</div>
+        </div>
+        <span class="portfolio-card-status">Completed</span>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img" style="background:linear-gradient(135deg,#1a2a3a 0%,#2a3a4a 50%,#0d1b2a 100%);"></div>
+        <div class="portfolio-card-overlay">
+          <span class="portfolio-card-tag">Dev. PM</span>
+          <div class="portfolio-card-title">Gangnam Luxury Boutique Meditel<br>Development PM</div>
+          <div class="portfolio-card-sub">Gangnam, Seoul · Private Developer</div>
+          <div class="portfolio-card-sub">Keywords: Gangnam, Luxury, Boutique, Meditel, Medical Tourism</div>
+        </div>
+        <span class="portfolio-card-status">In Progress</span>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img" style="background:linear-gradient(135deg,#1a3020 0%,#2a4a30 50%,#0d2015 100%);"></div>
+        <div class="portfolio-card-overlay">
+          <span class="portfolio-card-tag">HMA Advisory</span>
+          <div class="portfolio-card-title">Public Institution 5-Star Hotel<br>HMA Drafting & Negotiation Advisory</div>
+          <div class="portfolio-card-sub">Korean Public Institution · 2024–2025</div>
+          <div class="portfolio-card-sub">Keywords: 5-star, HMA, negotiation advisory</div>
+        </div>
+        <span class="portfolio-card-status">Completed</span>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img" style="background:linear-gradient(135deg,#3a2a1a 0%,#5a4a30 50%,#2d1e0f 100%);"></div>
+        <div class="portfolio-card-overlay">
+          <span class="portfolio-card-tag">Dev. Advisory</span>
+          <div class="portfolio-card-title">Shilla Monogram Gangneung Development</div>
+          <div class="portfolio-card-sub">Global 5-star lifestyle brand · The Shilla Hotels</div>
+        </div>
+        <span class="portfolio-card-status">Completed</span>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img" style="background:linear-gradient(135deg,#2a1a2a 0%,#4a2a4a 50%,#1a0f1a 100%);"></div>
+        <div class="portfolio-card-overlay">
+          <span class="portfolio-card-tag">Dev. Advisory</span>
+          <div class="portfolio-card-title">Shilla Stay West Busan Development</div>
+          <div class="portfolio-card-sub">Busan · Shilla Stay brand · The Shilla Hotels</div>
+        </div>
+        <span class="portfolio-card-status">Completed</span>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-card-img" style="background:linear-gradient(135deg,#3a1a0a 0%,#5a3a1a 50%,#2d0f05 100%);"></div>
+        <div class="portfolio-card-overlay">
+          <span class="portfolio-card-tag">Dev. Advisory</span>
+          <div class="portfolio-card-title">Shilla Monogram Xi'an Development</div>
+          <div class="portfolio-card-sub">Xi'an, China · Global brand overseas expansion · The Shilla Hotels</div>
+        </div>
+        <span class="portfolio-card-status">Completed</span>
+      </div>
     </div>
   </section>
 
-  <section id="team">
+  <!-- Team -->
+  <section id="h-team">
     <div class="section-header fade-up">
-      <div class="section-header-left"><p class="section-label">Our Team</p><h2>주요 인력</h2></div>
-      <p class="section-header-right">부동산 투자 컨설팅, 물류 기획, 리서치 등<br>각 분야 최고 전문가로 구성된 팀</p>
+      <div class="section-header-left"><p class="section-label">Our Expert</p><h2>Hotels & Branded<br>Properties Expert</h2></div>
+      <p class="section-header-right">A specialist with over 10 years of direct experience<br>in the full hotel development cycle and global sourcing</p>
     </div>
-    <div class="team-grid fade-up">
-      <div class="team-card">
-        <div class="team-card-accent"></div>
-        <p class="team-role">대표이사 / CEO</p>
-        <h2 class="team-name">전용민</h2>
-        <p class="team-name-en">Victor Jun</p>
-        <div class="team-career-summary"><span class="career-badge">부동산 경력 15년</span><span class="career-badge">CBRE Korea</span><span class="career-badge">Colony Capital</span><span class="career-badge">U of Michigan</span></div>
-        <p class="team-bio">CBRE Korea에서 매입매각 및 임대차 컨설팅을 2011년부터 수년간 수행하였으며, 물류센터 시장의 변천과 역사에 대한 깊은 이해를 보유하고 있습니다. Colony Capital 한국사무소에서 국내외 부동산 투자 및 역외펀드 자금 모집을 담당했으며, 미국 물류센터 포트폴리오(500개 이상 편입자산)에 투자하는 Colony Industrial Fund의 한국 담당자로 활동했습니다.</p>
-        <div class="team-contact">
-          <a href="mailto:victor.jun@uyuni.ai"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg>victor.jun@uyuni.ai</a>
-          <a href="tel:01040449037"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H3a1 0 00-1 1v1c0 6 5 11 11 11h1a1 1 0 001-1v-2l-3-1-1 1a9 9 0 01-4-4l1-1-1-3z"/></svg>010-4044-9037</a>
+    <div class="h-team-grid fade-up">
+      <div class="h-team-card">
+        <div class="h-team-card-accent"></div>
+        <p class="team-role" style="color:var(--gold);">Hotels &amp; Branded Properties Director</p>
+        <h2 class="team-name" style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:var(--white);margin-bottom:8px;">Song Ye Han</h2>
+        <p class="team-name-en" style="font-family:'DM Sans',sans-serif;font-size:13px;color:var(--silver);font-weight:300;letter-spacing:1px;margin-bottom:32px;">한송이</p>
+        <div class="team-career-summary">
+          <span class="career-badge" style="background:rgba(201,169,110,0.12);color:rgba(201,169,110,0.9);">10+ Years Experience</span>
+          <span class="career-badge" style="background:rgba(201,169,110,0.12);color:rgba(201,169,110,0.9);">The Shilla Hotels & Resorts</span>
+          <span class="career-badge" style="background:rgba(201,169,110,0.12);color:rgba(201,169,110,0.9);">OECD Korea</span>
+          <span class="career-badge" style="background:rgba(201,169,110,0.12);color:rgba(201,169,110,0.9);">LG International</span>
+        </div>
+        <p class="team-bio" style="border-top-color:rgba(201,169,110,0.15);">
+          From trading, alternative investments, and mining development at a leading Korean conglomerate, to tax research at an international organization, to the longest tenure in development practice at Korea's premier hospitality company — including serving as the youngest division head (global hotel sourcing). A true all-rounder hospitality professional who has independently PM'd the full hotel development process, executed overseas hotel developments, and developed high-end branded properties, with deep expertise across all areas.
+        </p>
+        <div class="team-contact" style="border-top-color:rgba(201,169,110,0.15);">
+          <a href="mailto:syhan@uyuni.ai" style="color:var(--silver);"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg>Contact: syhan@uyuni.ai</a>
         </div>
       </div>
-      <div class="team-card">
-        <div class="team-card-accent"></div>
-        <p class="team-role">Sr. Manager</p>
-        <h2 class="team-name">방소진</h2>
-        <p class="team-name-en">Amy Bang</p>
-        <div class="team-career-summary"><span class="career-badge">경력 7년</span><span class="career-badge">Cushman & Wakefield</span><span class="career-badge">UPS Korea</span><span class="career-badge">CPIM</span></div>
-        <p class="team-bio">Cushman &amp; Wakefield Korea의 국내 첫 Industrial Sector 리서치 담당자로서 물류센터 및 데이터센터의 초기 데이터베이스를 구축하고 전국 단위로 시장 조사를 확대했습니다. 국내 자문사 최초로 전라권 물류 시장 보고서를 발간하는 등 다양한 Special Report와 Issue Report를 통해 시장에 필요한 인사이트를 선도적으로 제공해왔습니다.</p>
-        <div class="team-contact">
-          <a href="mailto:amy.bang@uyuni.ai"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg>amy.bang@uyuni.ai</a>
-          <a href="tel:01026252593"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H3a1 0 00-1 1v1c0 6 5 11 11 11h1a1 1 0 001-1v-2l-3-1-1 1a9 9 0 01-4-4l1-1-1-3z"/></svg>010-2625-2593</a>
-        </div>
-      </div>
     </div>
   </section>
 
-  <section id="recognition">
-    <div class="section-header fade-up">
-      <div class="section-header-left"><p class="section-label">Recognition & Expertise</p><h2>업계 공인<br>전문성</h2></div>
-      <p class="section-header-right">주요 매체 기고, 기관 강의, 투자심의위원 등<br>다양한 채널을 통해 인정받는 전문가</p>
-    </div>
-    <div class="recognition-grid fade-up">
-      <div class="recognition-card"><div class="rec-logo-area"><span style="font-size:18px;color:#1a5276;font-weight:700;">kt estate</span></div><h3 class="rec-title">KT Estate 투자심의위원</h3><p class="rec-desc">KT 계열 부동산 전문회사의 물류센터 투자 외부 심의위원으로서 관련 투자 자문을 제공하고 있습니다.</p><p class="rec-since">2024년 5월 ~ 현재</p></div>
-      <div class="recognition-card"><div class="rec-logo-area"><span style="color:#c0392b;font-size:13px;">SPI Seoul Property Insight</span></div><h3 class="rec-title">Seoul Property Insight 정기 기고</h3><p class="rec-desc">상업용 부동산 전문가 필독 매체 SPI에 물류센터 관련 월 1회 정기 기고 중. 누적 36건(2026년 1월 기준).</p><p class="rec-since">2023년 1월 ~ 현재</p></div>
-      <div class="recognition-card"><div class="rec-logo-area"><span style="font-size:12px;color:#2e86c1;line-height:1.4;">한국금융투자협회<br>금융투자교육원</span></div><h3 class="rec-title">금융투자교육원 강의</h3><p class="rec-desc">증권사, 은행, 보험사, 자산운용사 등 각종 금융사 실무진을 대상으로 물류센터 투자 강의를 진행합니다.</p></div>
-      <div class="recognition-card"><div class="rec-logo-area"><span style="font-size:14px;color:#117864;">물류신문</span></div><h3 class="rec-title">물류신문 세미나 및 기사 집필</h3><p class="rec-desc">물류신문 창간 27주년 기념 세미나 강연 및 2025년 물류전략 기획특집 기사를 집필하였습니다.</p></div>
-    </div>
-  </section>
-
-  <section id="contact">
+  <!-- Contact -->
+  <section id="h-contact">
     <div class="contact-inner fade-up">
       <p class="section-label">Contact Us</p>
-      <h2>함께<br>성장하겠습니다</h2>
-      <p>물류 부동산에 관한 어떠한 문의도 환영합니다.<br>최고의 전문가 팀이 최적의 솔루션을 제공합니다.</p>
-      <div class="contact-info-grid">
-        <div class="contact-info-item"><label>Address</label><p>경기 성남시 분당구 판교역로 136<br>판교역 힐스테이트 1층 1056호</p></div>
-        <div class="contact-info-item"><label>전용민 대표이사</label><a href="mailto:victor.jun@uyuni.ai" style="display:block">victor.jun@uyuni.ai</a><a href="tel:01040449037" style="display:block;margin-top:6px">010-4044-9037</a></div>
-        <div class="contact-info-item"><label>방소진 차장</label><a href="mailto:amy.bang@uyuni.ai" style="display:block">amy.bang@uyuni.ai</a><a href="tel:01026252593" style="display:block;margin-top:6px">010-2625-2593</a></div>
+      <h2>Bringing Your<br>Hospitality Vision<br>to Life</h2>
+      <p>We welcome any inquiry regarding hotel development,<br>investment analysis, brand selection, HMA negotiation, and more.</p>
+      <div class="contact-info-grid" style="border-top-color:rgba(201,169,110,0.2);">
+        <div class="contact-info-item"><label>Address</label><p>136 Pangyoyeok-ro, Bundang-gu<br>Seongnam, Gyeonggi-do · Unit 1056</p></div>
+        <div class="contact-info-item"><label>Song Ye Han, Director</label><a href="mailto:syhan@uyuni.ai" style="color:var(--white);">syhan@uyuni.ai</a></div>
       </div>
     </div>
-    <footer>
+    <footer style="border-top-color:rgba(201,169,110,0.15);">
       <div class="footer-logo"><img class="footer-logo-img" alt="uyuni" style="height:40px;filter:brightness(0) invert(1);opacity:0.88;"></div>
-      <p>© 2026 Uyuni Inc. All rights reserved.</p>
+      <p style="color:var(--silver);opacity:0.4;">&copy; 2026 Uyuni Inc. All rights reserved.</p>
     </footer>
   </section>
-</div>
+
+</div><!-- /site-hotels -->
 
 <script>
   const nav = document.getElementById('navbar');
@@ -507,7 +724,5 @@
   document.querySelectorAll('#navOverlay a').forEach(a=>a.addEventListener('click',closeMobileMenu));
   window.addEventListener('resize',()=>{if(window.innerWidth>1024)closeMobileMenu();});
 </script>
-</body>
-
 </body>
 </html>
