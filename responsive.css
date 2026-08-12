@@ -105,6 +105,7 @@ body.hotel-page .nav-overlay{background:rgba(26,15,8,0.97);}
   #track-record{padding:80px 32px;}
   .project-row{grid-template-columns:60px 1fr;gap:16px;padding:24px 12px;margin:0 -12px;}
   .project-tag,.project-meta{display:none;}
+  .track-stats{grid-template-columns:1fr;gap:16px;}
 
   /* ─ Track Record (Hotels) ─ */
   #h-projects{padding:80px 32px;}
